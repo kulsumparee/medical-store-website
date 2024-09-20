@@ -1,7 +1,7 @@
 import { FaFacebookF, FaLinkedinIn, FaPhone, FaRegHeart, FaSearch, FaShoppingCart } from "react-icons/fa"
 import DropdownComp from "../dropdown/Index"
 import { FaInstagram, FaPerson,  FaTwitter } from "react-icons/fa6"
-import Navlogo from "../../../assets/pakdeal.jpg"
+import Navlogo from "../../../assets/pakdeals.svg"
 import { Divider } from "antd"
 import Line from "../../../assets/line.svg"
 

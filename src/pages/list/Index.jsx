@@ -17,7 +17,7 @@ const CardList = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 
-  const [cartData, setCartData] = useState(true)
+  const [cartData, setCartData] = useState(false)
   return (
     <>
      
