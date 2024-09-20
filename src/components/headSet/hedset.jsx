@@ -3,7 +3,7 @@ import HeadSetData from './Data'
 
 const HeadSet2Comp = () => {
     return (
-        <div className='py-20'>
+        <div className='pt-20'>
             {
                 HeadSetData.map(data =>
                     <div key={data.id} className='relative py-10'>

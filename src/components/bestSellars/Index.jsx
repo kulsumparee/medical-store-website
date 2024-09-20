@@ -22,13 +22,15 @@ const SallarComponent = ({ navBar, data }) => {
                
                 <div>
                     {navBar === "first" ?
-                        <>
-                            <h1 className="text-xl font-bold">Best Sellers</h1>
-                        </>
+                        
+                            <h1 className="text-2xl font-bold">Best Sellers</h1>
+                        
                         : navBar === "second" ?
-                <>
-                                <h1 className="text-xl font-bold">Save on TV, video, & home audio</h1>
-                            </>
+                
+                                <h1 className="text-2xl font-bold">Save on TV, video, & home audio</h1>
+                            
+                            : navBar === "third" ?
+                                <h1 className="text-2xl font-bold">Top-rated products</h1>
                             : "none"
                                 
                 }
@@ -46,9 +48,9 @@ const SallarComponent = ({ navBar, data }) => {
                                     <li>All</li>
                                 </>
                                 : navBar === "second" ?
-                                    <li className=' ml-52'>See All</li>
+                                    <li className=''><span className='hover:underline'>See</span> All</li>
                                     : navBar === "third" ?
-                                        <li className=' ml-52'>See All</li>
+                                        <li className=''><span className='hover:underline'>See</span> All</li>
                                         : "none"
                             }
                         </ul>

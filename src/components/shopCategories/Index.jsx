@@ -22,13 +22,13 @@ const ShopCategoriesComp = () => {
               </nav>
           </div>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-6 px-16 sm:px-0 '>
+          <div className='sm:grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-6 px-10 md:px-0 flex flex-col items-center '>
               {
                   ShopData.map(data => 
                       <div key={data.id} className="p-3 hover:shadow-2xl hover:bg-slate-50 transform group ">
                           <img src={data.image} alt={data.title} />
                           <h1 className=' text-md md:text-lg font-medium text-gray-400 py-2'>{data.brand}</h1>
-                          <h1 className=' text-md md:text-md font-medium leading-6'>{data.title}</h1>
+                          <h1 className=' text-md md:text-md font-medium leading-6 w-64 md:w-40'>{data.title}</h1>
 
                           <div className='flex items-center'>
                               <Rate value={5} className='text-sm lg:text-lg py-2' />
