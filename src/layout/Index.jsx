@@ -1,6 +1,5 @@
 import React from 'react'
 import Mainlayout from '../mainlayout/Index'
-import DrawerComp from '../components/header/Drawer'
 import HeroSecton from '../components/heroSection/Index'
 import CategoriesCompo from '../components/categories/Index'
 import SavingsCompo from '../components/majorSavings/Index'
@@ -15,7 +14,6 @@ import BlogPostComp from '../components/blogPost/Index'
 const Layout = () => {
   return (
     <Mainlayout>
-      
       <HeroSecton />
       <CategoriesCompo />
       <SavingsCompo />

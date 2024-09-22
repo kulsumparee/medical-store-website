@@ -5,6 +5,7 @@ import ClearIcon from '@mui/icons-material/Clear';
 import CardData from './Data';
 import Counter from '../page3/counter';
 import Button from '../../components/Button/Button';
+import { Link } from 'react-router-dom';
 
 const AddToCartPage
     = () => {
@@ -91,7 +92,7 @@ const AddToCartPage
                             </div>
                             <div className="flex justify-between mb-2">
                                 <span className="text-gray-600">Order Discounts</span>
-                                <span className="font-medium text-red-500">-$30.01</span>
+                                <span className="font-medium ">-$30.01</span>
                             </div>
                             <div className="flex justify-between mb-2">
                                 <span className="text-gray-600">Estimated Shipping</span>
@@ -106,7 +107,9 @@ const AddToCartPage
                                 <span className="text-lg font-semibold">Total</span>
                                 <span className="text-lg font-semibold">$225.98</span>
                             </div>
-                            <Button title=" Proceed to checkout" className="w-full text-white py-3 rounded-lg font-medium "/>
+                            <Link to="/checkout">
+                            <Button title=" Proceed to checkout" className="w-full py-3 rounded-lg font-medium "/>
+                            </Link>
                                
                             
                         </div>

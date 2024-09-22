@@ -4,7 +4,7 @@ import { LeftOutlined, RightOutlined, HeartOutlined, ShareAltOutlined } from '@a
 import sallerProducts from './data';
 
 const SallarComponent = ({ navBar, data }) => {
-     const [jsonData, setJsonData] = useState(data)
+    const [jsonData, setJsonData] = useState(data)
 
     const carouselRef = useRef(null);
 
@@ -19,21 +19,25 @@ const SallarComponent = ({ navBar, data }) => {
     return (
         <div className="py-20 sm:px-5 w-full h-full relative">
             <div className="sm:flex text-center sm:justify-between pb-5">
-               
+
                 <div>
                     {navBar === "first" ?
-                        
-                            <h1 className="text-2xl font-bold">Best Sellers</h1>
-                        
+
+                        <h1 className="text-2xl font-bold">Best Sellers</h1>
+
                         : navBar === "second" ?
-                
-                                <h1 className="text-2xl font-bold">Save on TV, video, & home audio</h1>
-                            
+
+                            <h1 className="text-2xl font-bold">Save on TV, video, & home audio</h1>
+
                             : navBar === "third" ?
                                 <h1 className="text-2xl font-bold">Top-rated products</h1>
-                            : "none"
-                                
-                }
+                                : navBar === "forth" ?
+                                    <h1 className="text-2xl font-bold">Related products</h1>
+                                    : navBar === "fifth" ?
+                                        <h1 className="text-2xl font-bold">You may also like…</h1>
+                                    : "none"
+
+                    }
                 </div>
 
                 <div>
@@ -51,13 +55,16 @@ const SallarComponent = ({ navBar, data }) => {
                                     <li className=''><span className='hover:underline'>See</span> All</li>
                                     : navBar === "third" ?
                                         <li className=''><span className='hover:underline'>See</span> All</li>
+                                        : navBar === "forth" ?
+                                            <></>
+                                            : navBar === "fifth" ?
+                                                <></>
                                         : "none"
                             }
                         </ul>
                     </nav>
                 </div>
             </div>
-
             <Carousel
                 ref={carouselRef}
                 arrows={false}

@@ -4,6 +4,7 @@ import { FaInstagram, FaPerson,  FaTwitter } from "react-icons/fa6"
 import Navlogo from "../../../assets/pakdeals.svg"
 import { Divider } from "antd"
 import Line from "../../../assets/line.svg"
+import { Link } from "react-router-dom"
 
 
 const HeaderComponent = () => {
@@ -57,10 +58,13 @@ const HeaderComponent = () => {
                         <h1>Wishlist</h1>
                     </div>
 
-                    <div className="flex items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
-                        <FaPerson />
-                        <h1>Compare</h1>
-                    </div>
+                   
+                       
+                        <Link to="/sign-in" className="flex items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
+                            <FaPerson />
+                            <h1>SignIn</h1>
+                        </Link>
+                   
 
                     <div className="flex items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
                         <FaShoppingCart/>
@@ -75,7 +79,7 @@ const HeaderComponent = () => {
             </div>
 
             <div className=" pt-10">
-                <img src={Line} alt="line" />
+                <img src={Line} alt="line" height={140} />
             </div>
 
            

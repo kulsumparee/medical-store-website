@@ -28,7 +28,7 @@ function valuetext(value) {
 
 function AccordionUsage() {
     return (
-        <div className=' sm:w-full lg:w-[62%]'>
+        <div className=' sm:w-full lg:w-[70%]'>
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
