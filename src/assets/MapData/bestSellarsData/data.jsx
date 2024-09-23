@@ -1,14 +1,14 @@
 
-import sallar1 from "../../assets/images/sallar/Surface 1.svg"
-import sallar2 from "../../assets/images/sallar/Surface 2.svg"
-import sallar3 from "../../assets/images/sallar/Surface 3.svg"
-import sallar4 from "../../assets/images/sallar/Surface 4.svg"
-import sallar5 from "../../assets/images/sallar/Surface 5.svg"
-import sallar6 from "../../assets/images/sallar/Surface 1.svg"
-import sallar7 from "../../assets/images/sallar/Surface 2.svg"
-import sallar8 from "../../assets/images/sallar/Surface 3.svg"
-import sallar9 from "../../assets/images/sallar/Surface 4.svg"
-import sallar0 from "../../assets/images/sallar/Surface 5.svg"
+import sallar1 from "../../images/sallar/Surface 1.svg"
+import sallar2 from "../../images/sallar/Surface 2.svg"
+import sallar3 from "../../images/sallar/Surface 3.svg"
+import sallar4 from "../../images/sallar/Surface 4.svg"
+import sallar5 from "../../images/sallar/Surface 5.svg"
+import sallar6 from "../../images/sallar/Surface 1.svg"
+import sallar7 from "../../images/sallar/Surface 2.svg"
+import sallar8 from "../../images/sallar/Surface 3.svg"
+import sallar9 from "../../images/sallar/Surface 4.svg"
+import sallar0 from "../../images/sallar/Surface 5.svg"
 
 
 const sallerProducts = [

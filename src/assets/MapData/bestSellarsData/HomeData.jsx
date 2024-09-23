@@ -1,8 +1,8 @@
-import image1 from "../../assets/images/home/Surface1.svg"
-import image2 from "../../assets/images/home/Surface2.svg"
-import image3 from "../../assets/images/home/Surface3.svg"
-import image4 from "../../assets/images/home/Surface4.svg"
-import image5 from "../../assets/images/home/Surface5.svg"
+import image1 from "../../images/home/Surface1.svg"
+import image2 from "../../images/home/Surface2.svg"
+import image3 from "../../images/home/Surface3.svg"
+import image4 from "../../images/home/Surface4.svg"
+import image5 from "../../images/home/Surface5.svg"
 
 
 const HomeData = [

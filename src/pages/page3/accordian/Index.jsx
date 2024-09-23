@@ -5,14 +5,13 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Divider, Rate } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
-import Box from '@mui/material/Box';
-import Slider from '@mui/material/Slider';
 import img1 from "../../../assets/images/profile/user-img.svg"
 import img2 from "../../../assets/images/profile/Rectangle.svg"
-
 import { Input } from 'antd';
-import Carddata from './card';
+import Carddata from '../../../assets/MapData/accordianData/cardData';
 import Button from '../../../components/Button/Button';
+import SpecesData from '../../../assets/MapData/accordianData/SpecesData';
+import SliderSec from './slider';
 const { Search } = Input;
 const onSearch = (value, _e, info) => console.log(info?.source, value);
 const suffix = (
@@ -23,10 +22,6 @@ const suffix = (
         }}
     />
 );
-function valuetext(value) {
-    return `${value}°C`;
-}
-
 
 function AccordionUsage() {
     return (
@@ -70,53 +65,19 @@ function AccordionUsage() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <div className=' '>
-                        <div className='  grid grid-cols-2  py-3 bg-slate-200 '>
-                            <h1 className=' font-bold ml-2'>Brand</h1>
-                            <h1>Apple</h1>
-                        </div>
-                        <div className=' grid grid-cols-2 py-3 '>
-                            <h1 className=' font-bold ml-2'>Model Name</h1>
-                            <h1>MacBook Pro</h1>
-                        </div>
-                        <div className=' grid grid-cols-2  py-3 bg-slate-200 '>
-                            <h1 className=' font-bold ml-2'>Screen Size</h1>
-                            <h1>16.2 Inches</h1>
-                        </div>
-
-                        <div className=' grid grid-cols-2  py-3 '>
-                            <h1 className=' font-bold ml-2'>Color Space</h1>
-                            <h1>Space Gray</h1>
-                        </div>
-                        <div className=' grid grid-cols-2  py-3 bg-slate-200 '>
-                            <h1 className=' font-bold ml-2'>Hard Disk Size</h1>
-                            <h1>1 TB</h1>
-                        </div>
-                        <div className=' grid grid-cols-2  py-3 '>
-                            <h1 className=' font-bold ml-2'>CPU Model</h1>
-                            <h1>Apple M1</h1>
-                        </div>
-                        <div className=' grid grid-cols-2  py-3 bg-slate-200 '>
-                            <h1 className=' font-bold ml-2'>Ram Memory Installed Size</h1>
-                            <h1>16 GB</h1>
-                        </div>
-                        <div className=' grid grid-cols-2  py-3 '>
-                            <h1 className=' font-bold ml-2'>Graphics Card Description</h1>
-                            <h1>Integrated</h1>
-                        </div>
-                        <div className=' grid grid-cols-2  py-3 bg-slate-200 '>
-                            <h1 className=' font-bold ml-2'>Graphics Coprocessor</h1>
-                            <h1>M1 Pro</h1>
-                        </div>
-
+                       {SpecesData.map(data => 
+                                <div key={data.id} className='  grid grid-cols-2  py-3 px-2 my-2 bg-slate-200  border '>
+                                    <h1 className=' font-bold ml-2'>{data.title} </h1>
+                                    <h1 className=''>{data.Brand} </h1>
+                                </div>
+                            )}
                     </div>
                 </AccordionDetails>
             </Accordion>
 
             <Accordion cla>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-
-                >
+                    expandIcon={<ExpandMoreIcon />}  >
                     <h1 className='text-xl font-bold '> What's Included</h1>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -155,20 +116,12 @@ function AccordionUsage() {
                                             <p className=' line-through text-gray-500'>{data.original} </p>
                                         </div>
                                         <Button title="Go Product"/>
-                                        
                                     </div>
                                 </div>
-
-                                
-                            )
-                        }
-
+                            ) }
                     </div>
                 </AccordionDetails>
             </Accordion>
-
-
-
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />} >
@@ -239,75 +192,10 @@ function AccordionUsage() {
                                 <Rate />
                                 <h1>2 reviews</h1>
                             </div>
-
-
                         </div>
                         <div>
-
-
-                            <div className=' flex gap-4 text-center items-center mt-5'>
-                                <h1 className=' font-semibold'>5 stars</h1>
-                                <Box sx={{ width: 300 }}>
-                                    <Slider
-                                        aria-label="Temperature"
-                                        defaultValue={30}
-                                        getAriaValueText={valuetext}
-                                        color="warning"
-                                    />
-                                </Box>
-                                <h1 className=' font-semibold'>89%</h1>
-                            </div>
-
-                            <div className=' flex gap-4 text-center  mt-2'>
-                                <h1 className=' font-semibold'>4 stars</h1>
-                                <Box sx={{ width: 300 }}>
-                                    <Slider
-                                        aria-label="Temperature"
-                                        defaultValue={30}
-                                        getAriaValueText={valuetext}
-                                        color="warning"
-                                    />
-                                </Box>
-                                <h1 className=' font-semibold'>4%</h1>
-                            </div>
-
-                            <div className=' flex gap-4 text-center items-center mt-2'>
-                                <h1 className=' font-semibold'>3 stars</h1>
-                                <Box sx={{ width: 300 }}>
-                                    <Slider
-                                        aria-label="Temperature"
-                                        defaultValue={30}
-                                        getAriaValueText={valuetext}
-                                        color="warning"
-                                    />
-                                </Box>
-                                <h1 className=' font-semibold'>3%</h1>
-                            </div>
-
-                            <div className=' flex gap-4 text-center items-center mt-2'>
-                                <h1 className=' font-semibold'>2 stars</h1>
-                                <Box sx={{ width: 300 }}>
-                                    <Slider
-                                        aria-label="Temperature"
-                                        defaultValue={30}
-                                        getAriaValueText={valuetext}
-                                        color="warning"
-                                    />
-                                </Box>
-                                <h1 className=' font-semibold'>2%</h1>
-                            </div>
-
-                            <div className=' flex gap-4 text-center items-center mt-2'>
-                                <h1 className=' font-semibold'>7 stars</h1>
-                                <Box sx={{ width: 300 }}>
-                                    <Slider
-                                        aria-label="Temperature"
-                                        defaultValue={30}
-                                        getAriaValueText={valuetext}
-                                        color="warning"
-                                    />
-                                </Box>
-                                <h1 className=' font-semibold'>90%</h1>
+                            <div>
+                                <SliderSec/>
                             </div>
                             <div>
                                 <button className=' border-2 border-[#F5C34B] hover:bg-[#F5C34B] py-2 px-5 rounded-md mt-3'>
@@ -418,13 +306,11 @@ function AccordionUsage() {
                                     </form>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </AccordionDetails>
             </Accordion>
         </div>
-    );
-}
+    );}
 
 export default AccordionUsage;

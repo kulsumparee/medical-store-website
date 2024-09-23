@@ -1,9 +1,9 @@
 import React from 'react'
-import HeadSetData from './Data'
+import HeadSetData from '../../assets/MapData/headsetData/Data'
 
 const HeadSet2Comp = () => {
     return (
-        <div  className=' pt-10'>
+        <div className=' pt-10'>
             {
                 HeadSetData.map(data =>
                     <div key={data.id} className='relative py-10'>

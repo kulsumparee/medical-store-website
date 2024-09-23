@@ -1,5 +1,5 @@
 import React from 'react'
-import SavingsData from './Data'
+import SavingsData from '../../assets/MapData/majorSavings/Data'
 
 const SavingsCompo = () => {
   return (

@@ -1,5 +1,5 @@
-import img1 from "../../assets/images/hedset/bg.svg"
-import img2 from "../../assets/images/hedset/ggg.svg"
+import img1 from "../../images/hedset/bg.svg"
+import img2 from "../../images/hedset/ggg.svg"
 
 const HeadSetData = [
     {

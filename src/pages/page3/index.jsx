@@ -1,5 +1,5 @@
 import { ArrowLeftOutlined, DownOutlined } from '@ant-design/icons'
-import image1 from"../../assets/images/profile1.svg"
+import image1 from "../../assets/images/profile1.svg"
 import img1 from "../../assets/images/profile/heart 1.svg";
 import img2 from "../../assets/images/profile/graph 1.svg";
 import img3 from "../../assets/images/profile/question 1.svg";
@@ -13,8 +13,8 @@ import Counter from './counter'
 import AccordionUsage from './accordian/Index';
 import { Link } from 'react-router-dom';
 import SallarComponent from '../../components/bestSellars/Index';
-import sallerProducts from '../../components/bestSellars/data';
-import HomeData from '../../components/bestSellars/HomeData';
+import sallerProducts from '../../assets/MapData/bestSellarsData/data';
+import HomeData from '../../assets/MapData/bestSellarsData/HomeData';
 
 const SingleCard = ({ onBackClick }) => {
     return (

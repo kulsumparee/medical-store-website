@@ -1,7 +1,7 @@
 import { Carousel, Rate } from 'antd';
 import React, { useRef, useState } from 'react';
 import { LeftOutlined, RightOutlined, HeartOutlined, ShareAltOutlined } from '@ant-design/icons';
-import sallerProducts from './data';
+import sallerProducts from '../../assets/MapData/bestSellarsData/data';
 
 const SallarComponent = ({ navBar, data }) => {
     const [jsonData, setJsonData] = useState(data)
@@ -35,7 +35,7 @@ const SallarComponent = ({ navBar, data }) => {
                                     <h1 className="text-2xl font-bold">Related products</h1>
                                     : navBar === "fifth" ?
                                         <h1 className="text-2xl font-bold">You may also like…</h1>
-                                    : "none"
+                                        : "none"
 
                     }
                 </div>
@@ -59,7 +59,7 @@ const SallarComponent = ({ navBar, data }) => {
                                             <></>
                                             : navBar === "fifth" ?
                                                 <></>
-                                        : "none"
+                                                : "none"
                             }
                         </ul>
                     </nav>

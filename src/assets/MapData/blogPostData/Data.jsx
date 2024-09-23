@@ -1,6 +1,6 @@
-import imag1 from "../../assets/images/blogPost/img1.svg"
-import imag2 from "../../assets/images/blogPost/img2.svg"
-import imag3 from "../../assets/images/blogPost/img3.svg"
+import imag1 from "../../images/blogPost/img1.svg"
+import imag2 from "../../images/blogPost/img2.svg"
+import imag3 from "../../images/blogPost/img3.svg"
 
 
 export const BlogData = [

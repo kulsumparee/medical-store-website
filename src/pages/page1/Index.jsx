@@ -1,13 +1,13 @@
 import { Divider, Pagination, Rate } from 'antd'
 import React, { useState } from 'react'
-import { FirstPageData } from './Data'
+import { FirstPageData } from '../../assets/MapData/pages/page1Data/Data'
 import CardList from '../list/Index'
 import PaginationComp from '../list/Pagination'
 import SecondPage from '../page2/Index'
 import CommonData from '../Common'
 
 
-  const FirstScreen = () => {
+const FirstScreen = () => {
   const [filterData, setFilterData] = useState(true)
   const [listData, setListData] = useState(true)
 
@@ -26,12 +26,12 @@ import CommonData from '../Common'
   return (
 
     <>
-    
-    {filterData ? (
+
+      {filterData ? (
         <div div className='px-5 lg:px-10' >
           <h1 className=' text-md sm:text-lg  pt-10'>Home  /  Electronics  /  Computers  /  Desktop Computers</h1>
-          <CommonData  setFilterData={setFilterData} setListData={setListData}/>
-          
+          <CommonData setFilterData={setFilterData} setListData={setListData} />
+
           {listData ? (
             <>
               <div className='pt-10 grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 justify-center gap-2'>
@@ -61,7 +61,7 @@ import CommonData from '../Common'
                   <h1 className=' flex justify-center text-center'>1 – 20 of 300+ properties found</h1>
                 </div>
               </div>
-            </> 
+            </>
 
           ) : (
             <div>
@@ -72,13 +72,13 @@ import CommonData from '../Common'
 
 
         </div>
-    ): (
-        <SecondPage/>
-    )}
+      ) : (
+        <SecondPage />
+      )}
     </>
-   
-    
-  
+
+
+
   )
 }
 

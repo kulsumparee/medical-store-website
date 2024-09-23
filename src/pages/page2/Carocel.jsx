@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Carousel } from 'antd';
-import CarocelData from './CarocelData';
+import CarocelData from '../../assets/MapData/pages/page2Data/CarocelData';
 
 import { Link } from 'react-router-dom';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';

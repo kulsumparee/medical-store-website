@@ -1,5 +1,5 @@
 import React from 'react'
-import ShopData from './Data'
+import ShopData from '../../assets/MapData/shopCategories/Data'
 import { Rate } from 'antd'
 
 const ShopCategoriesComp = () => {

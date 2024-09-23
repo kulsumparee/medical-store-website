@@ -3,7 +3,7 @@ import AntCarocel from './Carocel';
 import Line from "../../assets/images/line.svg";
 import CommonData from '../Common';
 import CardList from '../list/Index';
-import { FirstPageData } from '../page1/Data';
+import { FirstPageData } from '../../assets/MapData/pages/page1Data/Data';
 import { Rate } from 'antd';
 import PaginationComp from '../list/Pagination';
 import SingleCard from '../page3';
@@ -22,15 +22,15 @@ const SecondPage = () => {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     const handleCardClick = (item) => {
-        setSelectedItem(item); 
+        setSelectedItem(item);
     };
 
     const handleBack = () => {
-        setSelectedItem(null); 
+        setSelectedItem(null);
     };
 
     if (selectedItem) {
-       
+
         return <SingleCard data={selectedItem} onBackClick={handleBack} />;
     }
 

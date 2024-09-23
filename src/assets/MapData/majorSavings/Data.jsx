@@ -1,9 +1,9 @@
-import img1 from "../../assets/images/major/images (1).svg"
-import img2 from "../../assets/images/major/images (2).svg"
-import img3 from "../../assets/images/major/images (3).svg"
-import img4 from "../../assets/images/major/images (4).svg"
-import img5 from "../../assets/images/major/images (5).svg"
-import img6 from "../../assets/images/major/images (7).svg"
+import img1 from "../../images/major/images (1).svg"
+import img2 from "../../images/major/images (2).svg"
+import img3 from "../../images/major/images (3).svg"
+import img4 from "../../images/major/images (4).svg"
+import img5 from "../../images/major/images (5).svg"
+import img6 from "../../images/major/images (7).svg"
 
 const SavingsData = [
     {

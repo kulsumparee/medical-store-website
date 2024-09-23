@@ -1,6 +1,6 @@
 import { Divider, Image, Rate } from 'antd'
 import React, { useState } from 'react'
-import { ListData } from './Data'
+import { ListData } from '../../assets/MapData/pages/listData/Data'
 import PaginationComp from './Pagination'
 import Button from '../../components/Button/Button'
 

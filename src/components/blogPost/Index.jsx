@@ -1,5 +1,5 @@
 import React from 'react'
-import { BlogData } from './Data'
+import { BlogData } from '../../assets/MapData/blogPostData/Data'
 import { Link } from 'react-router-dom'
 
 const BlogPostComp = () => {

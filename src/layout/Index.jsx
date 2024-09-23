@@ -6,8 +6,8 @@ import SavingsCompo from '../components/majorSavings/Index'
 import HeadSetComp from '../components/headSet/Index'
 import HeadSet2Comp from '../components/headSet/hedset'
 import SallarComponent from '../components/bestSellars/Index'
-import sallerProducts from '../components/bestSellars/data'
-import HomeData from '../components/bestSellars/HomeData'
+import sallerProducts from '../assets/MapData/bestSellarsData/data'
+import HomeData from '../assets/MapData/bestSellarsData/HomeData'
 import ShopCategoriesComp from '../components/shopCategories/Index'
 import BlogPostComp from '../components/blogPost/Index'
 
@@ -23,7 +23,7 @@ const Layout = () => {
       <ShopCategoriesComp />
       <HeadSet2Comp />
       <SallarComponent data={sallerProducts} navBar={"third"} />
-      <BlogPostComp/>
+      <BlogPostComp />
     </Mainlayout>
   )
 }
