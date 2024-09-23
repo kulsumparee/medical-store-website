@@ -1,12 +1,12 @@
 import { ArrowLeftOutlined, DownOutlined } from '@ant-design/icons'
-import image1 from "../../assets/profile1.svg"
-import img1 from "../../assets/profile/heart 1.svg";
-import img2 from "../../assets/profile/graph 1.svg";
-import img3 from "../../assets/profile/question 1.svg";
-import img4 from "../../assets/profile/share 1.svg";
-import img5 from "../../assets/profile/truck 1.svg";
-import img6 from "../../assets/profile/shop 1.svg";
-import img7 from "../../assets/profile/return-box 1.svg";
+import image1 from"../../assets/images/profile1.svg"
+import img1 from "../../assets/images/profile/heart 1.svg";
+import img2 from "../../assets/images/profile/graph 1.svg";
+import img3 from "../../assets/images/profile/question 1.svg";
+import img4 from "../../assets/images/profile/share 1.svg";
+import img5 from "../../assets/images/profile/truck 1.svg";
+import img6 from "../../assets/images/profile/shop 1.svg";
+import img7 from "../../assets/images/profile/return-box 1.svg";
 import { Divider, Image, Rate } from 'antd'
 import React from 'react'
 import Counter from './counter'
@@ -41,10 +41,10 @@ const SingleCard = ({ onBackClick }) => {
 
                 <div className=" col-span-12 md:col-span-12 md:mx-20 lg:mx-0 mt-10 lg:mt-0 lg:col-span-5">
                     <div className="border-2 p-3 md:p-8  sm:mb-4 lg:mb-0  rounded-md ">
-                        <div className="flex">
+                        <div className="flex items-center">
                             <h1 className="text-gray-500">APPLE</h1>
                             <Divider type="vertical" />
-                            <span><Rate /></span> <p className="ml-2">3,014 reviews</p>
+                            <span><Rate className=' flex gap-0 text-sm' /></span> <p className=" pl-2 text-sm">3,014 reviews</p>
                         </div>
                         <h1 className="text-xl md:font-semibold my-4">Apple MacBook Pro 16" (2021) - Space Grey (Apple M1 Pro Chip / 1TB SSD / 16GB RAM)</h1>
                         <Divider />
@@ -56,12 +56,12 @@ const SingleCard = ({ onBackClick }) => {
                         <div className="mt-5 flex gap-3">
                             <Counter />
                             <Link to="/cart" className='w-full'>
-                                <button className="flex justify-center items-center gap-5 py-2 rounded-full text-lg bg-[orange] font-semibold w-[70%]">
+                                <button className="flex justify-center items-center gap-5 py-2 rounded-full text-lg bg-[#F5C34B] font-semibold w-full">
                                     Add to cart
                                 </button></Link>
                         </div>
                         <div>
-                            <button className="flex justify-center flex-wrap items-center font-semibold py-3 border-2 rounded-full w-[100%] mt-5 border-[orange]">Buy Now</button>
+                            <button className="flex justify-center flex-wrap items-center font-semibold py-3 border-2 rounded-full w-[100%] mt-5 border-[#F5C34B]">Buy Now</button>
                             <div className=" flex flex-wrap mt-5 gap-1 items-center">
                                 <div className="flex text-center gap-1 text-xl"><img src={img1} width={20} alt="wishlist" /> wishlist</div>
                                 <Divider type="vertical" />
@@ -88,7 +88,7 @@ const SingleCard = ({ onBackClick }) => {
                                 </h1>
                             </div>
                             <div className="flex my-5 ml-7 gap-3">
-                                <Rate className=' text-sm md:text-md' /> <h1>965 seller reviews</h1>
+                                <Rate className=' text-sm flex md:text-md' /> <h1>965 reviews</h1>
                             </div>
 
                             <div className="flex gap-2  my-4">
@@ -107,9 +107,9 @@ const SingleCard = ({ onBackClick }) => {
                 </div>
 
             </div>
-            <div className=' px-10 '>
+            <div className=' px-5'>
 
-                <div className='lg:w-[55%] relative lg:bottom-80 md:py-10 lg:p-0'>
+                <div className='lg:w-[55%] relative lg:bottom-80 py-10 lg:p-0'>
                     <h1 className=' text-xl font-semibold'>OverView</h1>
                     <p className=''>The first notebook of its kind, this Apple MacBook Pro is a beast. With the blazing-fast M1 Pro chip — the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life. Add to that a stunning Liquid Retina XDR display, the best camera and audio ever in a Mac notebook, and all the ports you need.</p>
                     <button className=" flex items-center text-lg gap-2 text-violet-800 mt-2">Show more <DownOutlined /> </button>

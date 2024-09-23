@@ -1,10 +1,13 @@
 import { FaFacebookF, FaLinkedinIn, FaPhone, FaRegHeart, FaSearch, FaShoppingCart } from "react-icons/fa"
 import DropdownComp from "../dropdown/Index"
 import { FaInstagram, FaPerson,  FaTwitter } from "react-icons/fa6"
-import Navlogo from "../../../assets/pakdeals.svg"
+import Navlogo from "../../../assets/images/pakdeals.svg"
 import { Divider } from "antd"
-import Line from "../../../assets/line.svg"
+import Line from "../../../assets/images/line.svg"
 import { Link } from "react-router-dom"
+import imds from "../../../assets/images/account.svg"
+import cart from "../../../assets/images/cart.svg"
+
 
 
 const HeaderComponent = () => {
@@ -31,8 +34,8 @@ const HeaderComponent = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-12 md:px-2 lg:px-10 space-x-2 text-md  items-center relative bottom-28 md:bottom-0 md:top-3 ">
-                <div className="  col-span-12 md:col-span-2 flex  justify-center">
+            <div className="grid grid-cols-12 md:px-2 lg:px-10 space-x-2 text-md items-center relative bottom-28 md:bottom-0 md:top-3 ">
+                <div className="  col-span-12 md:col-span-2 flex  justify-center ">
                     <img src={Navlogo} alt="logo1" width={157} height={57} />
                 </div>
 
@@ -52,7 +55,7 @@ const HeaderComponent = () => {
 
                 </div>
 
-                <div className=" col-span-12 md:col-span-4 flex  space-x-2 justify-around">
+                <div className=" col-span-12 md:col-span-4 flex mt-3 space-x-2 justify-around">
                     <div className="flex items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
                         <FaRegHeart />
                         <h1>Wishlist</h1>
@@ -61,13 +64,13 @@ const HeaderComponent = () => {
                    
                        
                         <Link to="/sign-in" className="flex items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
-                            <FaPerson />
+                        <img src={imds} alt="account" />
                             <h1>SignIn</h1>
                         </Link>
                    
 
                     <div className="flex items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
-                        <FaShoppingCart/>
+                        <img src={cart} alt="account" />
                         <h1>Cart</h1>
                     </div>
                     

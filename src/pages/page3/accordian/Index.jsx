@@ -7,10 +7,12 @@ import { Divider, Rate } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import img1 from "../../../assets/profile/user-img.svg"
-import img2 from "../../../assets/profile/Rectangle.svg"
+import img1 from "../../../assets/images/profile/user-img.svg"
+import img2 from "../../../assets/images/profile/Rectangle.svg"
 
 import { Input } from 'antd';
+import Carddata from './card';
+import Button from '../../../components/Button/Button';
 const { Search } = Input;
 const onSearch = (value, _e, info) => console.log(info?.source, value);
 const suffix = (
@@ -135,70 +137,31 @@ function AccordionUsage() {
                     <h1 className='text-xl font-bold'> Vendor</h1>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <div className=' grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 '>
-                        <div className=' border-2 border-zinc-100 rounded-md p-3'>
-                            <div className="flex">
-                                <h1 className="text-gray-500">APPLE</h1>
-                                <Divider type="vertical" />
-                                <span><Rate /></span> <p className="ml-2">965 reviews</p>
-                            </div>
-                            <div className=''>
-                                <h1 className=' my-2 mt-4'>Fast Delivery: Ships in 1 day</h1>
-                                <h1>Free Cargo</h1>
-                            </div>
-                            <div className=' flex gap-12 mt-5'>
-                                <div className=' flex gap-2'><h1 className=' text-lg font-bold'>$32.50</h1> <h1 className=' line-through'>$45</h1></div>
-                                <button className=' py-2 px-7 bg-[orange] rounded-md'> Go Product</button>
-                            </div>
-                        </div>
+                    <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 '>
+                        {
+                            Carddata.map(data => 
+                                <div key={data.id} className=" border p-3 rounded-lg ">
+                                   
+                                        <p className=' font-medium'>{data.brand} </p>
+                                    <div className=" flex gap-3 items-center ">
+                                        <Rate className='text-sm' value={5} />
+                                        <p>{data.reviews} </p>
+                                    </div>
+                                    <p className=' text-lg py-2'>{data.title1} </p>
+                                    <p className=' text-lg pb-3'>{data.title2} </p>
+                                    <div className=" flex justify-between ">
+                                        <div className="flex gap-4 ">
+                                            <p className=' font-semibold'>{data.price} </p>
+                                            <p className=' line-through text-gray-500'>{data.original} </p>
+                                        </div>
+                                        <Button title="Go Product"/>
+                                        
+                                    </div>
+                                </div>
 
-                        <div className=' border-2 border-zinc-100 rounded-md p-3'>
-                            <div className="flex">
-                                <h1 className="text-gray-500">APPLE</h1>
-                                <Divider type="vertical" />
-                                <span><Rate /></span> <p className="ml-2">965 reviews</p>
-                            </div>
-                            <div className=''>
-                                <h1 className=' my-2 mt-4'>Fast Delivery: Ships in 1 day</h1>
-                                <h1>Free Cargo</h1>
-                            </div>
-                            <div className=' flex gap-12 mt-5'>
-                                <div className=' flex gap-2'><h1 className=' text-lg font-bold'>$32.50</h1> <h1 className=' line-through'>$45</h1></div>
-                                <button className=' py-2 px-7 border-2 border-[orange] rounded-md'> Go Product</button>
-                            </div>
-                        </div>
-
-                        <div className=' border-2 border-zinc-100 rounded-md p-3'>
-                            <div className="flex">
-                                <h1 className="text-gray-500">APPLE</h1>
-                                <Divider type="vertical" />
-                                <span><Rate /></span> <p className="ml-2">965 reviews</p>
-                            </div>
-                            <div className=''>
-                                <h1 className=' my-2 mt-4'>Fast Delivery: Ships in 1 day</h1>
-                                <h1>Free Cargo</h1>
-                            </div>
-                            <div className=' flex gap-12 mt-5'>
-                                <div className=' flex gap-2'><h1 className=' text-lg font-bold'>$32.50</h1> <h1 className=' line-through'>$45</h1></div>
-                                <button className=' py-2 px-7 border-2 border-[orange] rounded-md'> Go Product</button>
-                            </div>
-                        </div>
-
-                        <div className=' border-2 border-zinc-100 rounded-md p-3'>
-                            <div className="flex">
-                                <h1 className="text-gray-500">APPLE</h1>
-                                <Divider type="vertical" />
-                                <span><Rate /></span> <p className="ml-2">965 reviews</p>
-                            </div>
-                            <div className=''>
-                                <h1 className=' my-2 mt-4'>Fast Delivery: Ships in 1 day</h1>
-                                <h1>Free Cargo</h1>
-                            </div>
-                            <div className=' flex gap-12 mt-5'>
-                                <div className=' flex gap-2'><h1 className=' text-lg font-bold'>$32.50</h1> <h1 className=' line-through'>$45</h1></div>
-                                <button className=' py-2 px-7 border-2 border-[orange] rounded-md'> Go Product</button>
-                            </div>
-                        </div>
+                                
+                            )
+                        }
 
                     </div>
                 </AccordionDetails>
@@ -237,7 +200,7 @@ function AccordionUsage() {
                             <h1 className=' font-bold mb-1'> Q: Can dvds be played on apple computers?</h1>
                             <h1>Asked by Ali Tufan - May 14, 2022 on zenmart.com</h1>
 
-                            <div className='  mt-5 m-8 py-4 px-3 rounded-md bg-gray-100'>
+                            <div className='  my-5 md:mx-5 py-4 px-3  rounded-md bg-gray-100'>
                                 <h1 className=' font-bold mb-1'>A: If you buy a separate CD/DVD drive.</h1>
                                 <h1> Answered by TFN-Store - May 24, 2022 </h1>
                             </div>
@@ -247,13 +210,16 @@ function AccordionUsage() {
                             <h1 className=' font-bold mb-1'> Q: Can dvds be played on apple computers?</h1>
                             <h1>Asked by Ali Tufan - May 14, 2022 on zenmart.com</h1>
 
-                            <div className=' mt-5 m-8 py-4 px-3 rounded-md bg-gray-100'>
+                            <div className=' my-5 md:mx-5 py-4 px-3 rounded-md bg-gray-100'>
                                 <h1 className=' font-bold mb-1'>A: If you buy a separate CD/DVD drive.</h1>
                                 <h1> Answered by TFN-Store - May 24, 2022 </h1>
                             </div>
                         </div>
-                        <button className=' border-2 border-[#ffa600c9] hover:bg-[#ffa600c9] py-2 px-5 rounded-md ml-36'>
-                            Explore All Questions</button>
+                        
+                        
+                        <div className=' flex justify-center sm:justify-end'>
+                            <Button title="Explore All Questions" className="border-2 border-[#F5C34B] hover:bg-[#F5C34B]" />
+                        </div>
                     </div>
                 </AccordionDetails>
             </Accordion>
@@ -344,17 +310,17 @@ function AccordionUsage() {
                                 <h1 className=' font-semibold'>90%</h1>
                             </div>
                             <div>
-                                <button className=' border-2 border-[#ffa600c9] hover:bg-[#ffa600c9] py-2 px-5 rounded-md mt-3'>
+                                <button className=' border-2 border-[#F5C34B] hover:bg-[#F5C34B] py-2 px-5 rounded-md mt-3'>
                                     Write your review</button>
                             </div>
 
                             <div className=' mt-7'>
                                 <h1 className=' text-xl mb-5'>10 Reviews For This Product</h1>
 
-                                <div className=' flex gap-5'>
+                                <div className=' flex items-start gap-5'>
                                     <img src={img1} className=' cursor-pointer' alt="user-img" />
                                     <div>
-                                        <div className=' flex gap-2'>
+                                        <div className='md:flex items-center gap-2'>
                                             <Rate />
                                             <h1 className=' font-semibold text-lg '>A high performance Mac with a long lasting battery</h1>
                                         </div>
@@ -382,12 +348,14 @@ function AccordionUsage() {
                             <div className=' mt-7'>
                                 <h1 className=' text-xl mb-5'>10 Reviews For This Product</h1>
 
-                                <div className=' flex gap-5'>
+                                <div className=' flex gap-5 items-start'>
                                     <img src={img1} className=' cursor-pointer' alt="user-img" />
-                                    <div>
-                                        <div className=' flex gap-2'>
-                                            <Rate />
-                                            <h1 className=' font-semibold text-lg '>A high performance Mac with a long lasting battery</h1>
+                                    <div className=''>
+                                        <div className='md:flex items-center gap-2'>
+                                            <div>
+                                                <Rate />
+                                                <h1 className=' font-semibold text-lg '>A high performance Mac with a long lasting battery</h1>
+                                        </div>
                                         </div>
                                         <h1 className=' mt-2 text-lg'>Reviewed by Ali Tufan - April 27, 2022</h1>
                                     </div>
@@ -427,13 +395,13 @@ function AccordionUsage() {
                                     <form action="">
                                         <textarea className=' p-3 w-full h-80 border-2 rounded-md' name="text" id="" placeholder=' write yout thex here...' />
 
-                                        <div className=' grid grid-cols-2 gap-10'>
-                                            <div className=' my-4'>
+                                        <div className=' grid grid-cols-1 md:grid-cols-2  gap-x-10 gap-y-5 pt-3'>
+                                            <div className=''>
                                                 <label className=' text-lg font-semibold ' htmlFor="name">Name</label> <br />
                                                 <input className=' border-2 py-1 w-full mt-2 p-2 rounded-md' type="text" name="" id="" placeholder='Your Name' />
                                             </div>
 
-                                            <div className=' my-4'>
+                                            <div className=''>
                                                 <label className=' text-lg font-semibold ' htmlFor="name">Email</label> <br />
                                                 <input className=' border-2 py-1 w-full mt-2 p-2 rounded-md' type="text" name="" id="" placeholder='Your Email' />
                                             </div>
@@ -445,8 +413,7 @@ function AccordionUsage() {
                                         </div>
 
                                         <div className='   '>
-                                            <button className='  font-semibold border-2 border-[#ffa600c9] bg-[#ffa600c9] py-2 px-5 rounded-md mt-3'>
-                                                Submit</button>
+                                            <Button title="Submit" />
                                         </div>
                                     </form>
                                 </div>

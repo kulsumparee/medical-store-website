@@ -1,5 +1,5 @@
 import React from 'react'
-import CategoriesData from './Data'
+import CategoriesData from '../../assets/images/Data'
 
 const CategoriesCompo = () => {
   return (

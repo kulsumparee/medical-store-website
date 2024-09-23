@@ -4,7 +4,7 @@ import { Dropdown, Space } from 'antd';
 
 const DropdownComp = ({ title, item1, item2, item3, className }) => {
     return (
-        <Dropdown className={`mx-2 text-lg rounded-3xl py-1 px-5 bg-[#F3F5F6] ${className}`}
+        <Dropdown className={` mx-1 sm:mx-2 text-lg rounded-3xl py-1 px-2 sm:px-5 bg-[#F3F5F6] ${className}`}
             menu={{
                 items: [
                     {

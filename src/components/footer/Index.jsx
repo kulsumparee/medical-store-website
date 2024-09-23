@@ -1,13 +1,13 @@
 import React from 'react'
 import Button from '../Button/Button'
-import call from "../../assets/footer/call.svg"
-import email from "../../assets/footer/email.svg"
-import img1 from "../../assets/footer/1.svg"
-import img2 from "../../assets/footer/2.svg"
-import img3 from "../../assets/footer/3.svg"
-import img4 from "../../assets/footer/4.svg"
-import img5 from "../../assets/footer/5.png"
-import img6 from "../../assets/footer/6.svg"
+import call from "../../assets/images/footer/call.svg"
+import email from "../../assets/images/footer/email.svg"
+import img1 from "../../assets/images/footer/1.svg"
+import img2 from "../../assets/images/footer/2.svg"
+import img3 from "../../assets/images/footer/3.svg"
+import img4 from "../../assets/images/footer/4.svg"
+import img5 from "../../assets/images/footer/5.png"
+import img6 from "../../assets/images/footer/6.svg"
 import { FaAndroid, FaApple, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import { Divider } from 'antd'
 
@@ -109,11 +109,11 @@ const FooterSec = () => {
               <Divider />
           </div>
 
-          <div className=' flex  text-lg px-10'>
-              <div className=' flex gap-10'>
+          <div className=' flex text-md    sm:text-lg px-10'>
+              <div className=' md:flex gap-10'>
                   <p>© 2022 Zeomart. All Rights Reserved</p>
                   <nav>
-                      <ul className='flex gap-5'>
+                      <ul className='flex justify-center gap-5'>
                           <li>Privacy</li>
                           <li>Terms</li>
                           <li>Sitemap</li>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const CheckoutCard = () => {
   return (
-      <div className='px-10 pt-10'>
+      <div className=' px-5 md:px-10 pt-10'>
           <h1 className=' text-lg'>Home  /  Electronics  /  Computers  /  Desktop Computers</h1>
 
           <div className=" flex py-5 justify-center">
@@ -14,7 +14,11 @@ const CheckoutCard = () => {
 
       <div className='grid grid-cols-12 md:gap-10'>
         <div className=" col-span-12 lg:col-span-8">
-          <h1 className='text-lg py-2'>Returning customer?<span className=' font-semibold cursor-pointer'> Click here to login</span></h1>
+          <h1 className='text-lg py-2'>Returning customer?
+            <Link to="/sign-In">
+              <span className=' font-semibold cursor-pointer'> Click here to login</span>
+            </Link>
+          </h1>
           <h1 className=' text-xl font-semibold py-2'>Billing details</h1>
 
           <form action="">
@@ -29,7 +33,7 @@ const CheckoutCard = () => {
 
             <div className=" pt-5">
               <label htmlFor="" className='font-semibold text-lg '>Country / Region *</label> <br />
-              <select className='py-2 w-full border rounded-md border-stone-200 mt-2' name="" id="">
+              <select className='py-2 w-full border rounded-md border-stone-200 mt-2 focus:outline-none ' name="" id="">
                 <option value="">select</option>
                 <option value="">Pakistan</option>
                 <option value="">India</option>
@@ -50,7 +54,7 @@ const CheckoutCard = () => {
 
             <div className=" pt-5">
               <label htmlFor="" className='font-semibold text-lg ' > State *</label> <br />
-              <select className=' py-2 w-full border rounded-md border-stone-200 mt-2 px-2' name="" id="">
+              <select className=' py-2 w-full border rounded-md border-stone-200 mt-2 px-2 focus:outline-none' name="" id="">
                 <option value="">select</option>
               </select>
             </div>
@@ -65,7 +69,7 @@ const CheckoutCard = () => {
             </div>
 
             <div className='flex gap-3 py-5'>
-              <input type="checkbox" name="" id="" className='' />
+              <input type="checkbox" name="" id="" className='focus:outline-none' />
               <label className=' font-semibold text-lg ' htmlFor="">Create an account?</label>
             </div>
 

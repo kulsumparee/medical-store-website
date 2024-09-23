@@ -1,7 +1,5 @@
 import { Divider, Pagination, Rate } from 'antd'
 import React, { useState } from 'react'
-import DropdownComp from './Dropdown'
-import { FaFilter } from 'react-icons/fa'
 import { FirstPageData } from './Data'
 import CardList from '../list/Index'
 import PaginationComp from '../list/Pagination'
@@ -9,10 +7,10 @@ import SecondPage from '../page2/Index'
 import CommonData from '../Common'
 
 
-const FirstScreen = () => {
+  const FirstScreen = () => {
   const [filterData, setFilterData] = useState(true)
   const [listData, setListData] = useState(true)
-  
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 15;
 
@@ -63,7 +61,7 @@ const FirstScreen = () => {
                   <h1 className=' flex justify-center text-center'>1 – 20 of 300+ properties found</h1>
                 </div>
               </div>
-            </>
+            </> 
 
           ) : (
             <div>

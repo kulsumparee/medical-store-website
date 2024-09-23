@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AntCarocel from './Carocel';
-import Line from "../../assets/line.svg";
+import Line from "../../assets/images/line.svg";
 import CommonData from '../Common';
 import CardList from '../list/Index';
 import { FirstPageData } from '../page1/Data';
@@ -11,7 +11,7 @@ import SingleCard from '../page3';
 const SecondPage = () => {
     const [listData, setListData] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
-    const [selectedItem, setSelectedItem] = useState(null); // Add selectedItem state
+    const [selectedItem, setSelectedItem] = useState(null);
 
     const itemsPerPage = 15;
 

@@ -3,8 +3,8 @@ import SavingsData from './Data'
 
 const SavingsCompo = () => {
   return (
-      <div className='w-full  py-10 px-10'> 
-          <div className='border-2 p-10 rounded-md'>
+      <div className='w-full py-10 px-5 md:px-10'> 
+          <div className='border-2 p-5 md:p-10 rounded-md'>
               <h1 className=' text-2xl font-medium pb-4'>Major savings</h1>
           
           <div className=' grid sm:grid-cols-2 md:grid-cols-3  gap-5 '>

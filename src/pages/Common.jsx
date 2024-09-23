@@ -8,7 +8,7 @@ const CommonData = ({ setFilterData, setListData, className }) => {
       <div>
           <div>
               <h1 className='text-2xl font-medium pt-5'>Laptops and Accessories</h1>
-              <p className=' text-lg pt-1'>Shop laptops, desktops, monitors, tablets, PC gaming, hard drives and storage, accessories and more</p>
+              <p className=' text-md sm:text-lg pt-1'>Shop laptops, desktops, monitors, tablets, PC gaming, hard drives and storage, accessories and more</p>
           </div>
 
           <Divider />

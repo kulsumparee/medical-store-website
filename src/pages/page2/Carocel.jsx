@@ -24,10 +24,8 @@ const AntCarocel = () => {
                     {CarocelData.map(data => (
                         <div key={data.id} className='relative h-[40vh] sm:h-[70vh] text-white w-full'>
                             <img src={data.src} style={{ height: "100%", width: "100%" }} alt="carocel" className='object-cover' />
-                            <div className="absolute inset-0 left-20 md:left-36 top-20">
-                                
-                                <h1 className='text-3xl md:text-4xl lg:text-5xl py-2'>{data.Heading1}</h1>
-                                <h1 className='text-3xl md:text-4xl lg:text-5xl'>{data.Heading2}</h1>
+                            <div className="absolute inset-0 left-20 md:left-36 top-5 sm:top-20">                       
+                                    <h1 className='text-3xl md:text-4xl lg:text-5xl py-2 w-full md:w-[60%]'>{data.Heading1}</h1>
                                 <p className='text-lg md:text-xl sm:py-3 md:w-[37%]'>{data.paragraph}</p>
                                
                                     <Button title="Shop Now" className="sm:py-3 px-4" />

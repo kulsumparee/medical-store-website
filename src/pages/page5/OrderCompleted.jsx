@@ -1,9 +1,9 @@
 import React from 'react'
-import icon from "../../assets/icons.svg"
+import icon from "../../assets/images/icons.svg"
 
 const OrderCompleted = () => {
   return (
-      <div className=' px-10'>
+      <div className=' px-5 md:px-10'>
           <h1 className=' text-lg py-10'>Home  /  Electronics  /  Computers  /  Desktop Computers</h1>
 
           <div className=' flex flex-col items-center'>
@@ -15,22 +15,22 @@ const OrderCompleted = () => {
 
    
       {/* Order Info */}
-          <div className=" p-2 md:p-4  my-10 mx-auto max-w-4xl border border-dashed border-gray-600">
+          <div className=" p-2 md:p-4 min-w-max  my-10 mx-auto max-w-4xl border rounded-md border-dashed border-gray-600">
         <div className="sm:flex justify-between">
-          <div  className='flex sm:flex-col gap-x-5 pb-2'>
-            <p className="text-gray-600">Order Number</p>
+          <div  className='flex sm:flex-col justify-between pb-2'>
+            <p className="text-gray-600">Order Number:</p>
             <p className="font-semibold">039422</p>
           </div>
-                  <div className='flex sm:flex-col gap-x-5 pb-2'>
-            <p className="text-gray-600">Date</p>
+                  <div className='flex sm:flex-col justify-between pb-2'>
+            <p className="text-gray-600">Date:</p>
             <p className="font-semibold">27/04/2022</p>
           </div>
-                  <div className='flex sm:flex-col gap-x-5 pb-2'>
-            <p className="text-gray-600">Total</p>
+                  <div className='flex sm:flex-col justify-between  pb-2'>
+            <p className="text-gray-600">Total:</p>
             <p className="font-semibold">$2984.10</p>
           </div>
-                  <div className='flex sm:flex-col gap-x-5 pb-2'>
-            <p className="text-gray-600">Payment Method</p>
+                  <div className='flex sm:flex-col justify-between  pb-2 '>
+            <p className="text-gray-600">Payment Method:</p>
             <p className="font-semibold">Direct Bank Transfer</p>
           </div>
         </div>

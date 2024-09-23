@@ -1,6 +1,5 @@
 import { Box, Slider } from '@mui/material'
 import React from 'react'
-import image1 from "../../assets/profile1.svg";
 import ClearIcon from '@mui/icons-material/Clear';
 import CardData from './Data';
 import Counter from '../page3/counter';
@@ -10,7 +9,7 @@ import { Link } from 'react-router-dom';
 const AddToCartPage
     = () => {
         return (
-            <div className='px-10'>
+            <div className='px-5'>
                 <h1 className=' py-10 text-md sm:text-lg pt-10'>
                     Home / Electronics / Computers / Desktop Computers
                 </h1>
@@ -27,59 +26,63 @@ const AddToCartPage
                     </div>
                 </div>
                 <div className="grid grid-cols-12 gap-5 ">
-                    
-                
 
-                    <div className='  col-span-12 lg:col-span-9  '>
-                        <table className="min-w-max overflow-x-scroll scrollbar-hide border">
-                            <thead className='capitalize bg-gray-300 '>
-                                <tr className='border-b'>
-                                    <th className="px-4 py-4 text-left">Product</th>
-                                    <th className="px-4 py-4 text-left">Price</th>
-                                    <th className="px-4 py-4 text-left">Quantity</th>
-                                    <th className="px-4 py-4 text-left">Total</th>
-                                    <th className="px-4 py-4 text-left">Remove</th>
-                                </tr>
-                            </thead>
 
-                            <tbody>
-                                {CardData.map((data, index) =>
-                                    <tr key={index} className='border-b hover:bg-gray-50'>
-                                        <td className="px-4 py-2">
-                                            <div className='flex items-center gap-3'>
-                                                <img src={data.image} alt={data.title} className="w-32 h-32 object-cover" />
-                                                <div>
-                                                    <h1 className="font-medium w-52">{data.title}</h1>
-                                                    <p className="text-md text-gray-500">{data.capacity}</p>
-                                                    <p className="text-md text-gray-500">{data.color}</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td className="px-4 py-2 font-medium">{data.price}</td>
-                                        <td className="px-4 py-2"><Counter className="" /></td>
-                                        <td className="px-4 py-2 font-medium ">{data.price}</td>
-                                        <td className="px-4 py-2 text-center">
-                                            <button className="text-red-500 hover:text-red-700"><ClearIcon /></button>
-                                        </td>
+
+                    <div className='   col-span-12 lg:col-span-9  '>
+                        <div className=" overflow-auto">
+                            <table className="border min-w-max w-full ">
+                                <thead className="capitalize bg-gray-300">
+                                    <tr className="border-b">
+                                        <th className="px-4 py-4 text-left">Product</th>
+                                        <th className="px-4 py-4 text-left">Price</th>
+                                        <th className="px-4 py-4 text-left">Quantity</th>
+                                        <th className="px-4 py-4 text-left">Total</th>
+                                        <th className="px-4 py-4 text-left">Remove</th>
                                     </tr>
-                                )}
-                            </tbody>
-                        </table>
-                        <div className=" flex justify-between py-10">
+                                </thead>
 
-                            <div className=' border-2 border-dashed text-lg  flex p-3 gap-14 rounded-md'>
+                                <tbody>
+                                    {CardData.map((data, index) => (
+                                        <tr key={index} className="border-b hover:bg-gray-50">
+                                            <td className="px-4 py-2">
+                                                <div className="flex items-center gap-3">
+                                                    <img src={data.image} alt={data.title} className="w-20 h-20 md:w-32 md:h-32 object-cover" />
+                                                    <div>
+                                                        <h1 className="font-medium w-40 md:w-52">{data.title}</h1>
+                                                        <p className="text-sm md:text-md text-gray-500">{data.capacity}</p>
+                                                        <p className="text-sm md:text-md text-gray-500">{data.color}</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className="px-4 py-2 font-medium">{data.price}</td>
+                                            <td className="px-4 py-2"><Counter className="" /></td>
+                                            <td className="px-4 py-2 font-medium">{data.price}</td>
+                                            <td className="px-4 py-2 text-center">
+                                                <button className="text-red-500 hover:text-red-700"><ClearIcon /></button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                        <div className=" sm:flex justify-between py-10">
+
+                            <div className=' border-2 border-dashed text-lg  flex p-3 gap-14 rounded-md mb-5'>
                                 <p>Coupon code</p>
                                 <p>Apply Coupon</p>
                             </div>
 
-                            <div className=" flex gap-10">
-                                <Button title="Continue Shopping" className="bg-transparent border-2 border-[#F5C34B] " />
-                                <Button title="Update Cart" />
+                            <div className=" flex gap-5">
+                                <Button title="Continue Shopping" className="bg-transparent border-2 py-1 border-[#F5C34B] " />
+                                <Button title="Update Cart" className=""/>
 
                             </div>
 
                         </div>
-                        
+
                     </div>
 
 
@@ -108,18 +111,18 @@ const AddToCartPage
                                 <span className="text-lg font-semibold">$225.98</span>
                             </div>
                             <Link to="/checkout">
-                            <Button title=" Proceed to checkout" className="w-full py-3 rounded-lg font-medium "/>
+                                <Button title=" Proceed to checkout" className="w-full py-3 rounded-lg font-medium " />
                             </Link>
-                               
-                            
+
+
                         </div>
                     </div>
-                    </div>
-
                 </div>
 
+            </div>
 
-            
+
+
         )
     }
 

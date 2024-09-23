@@ -1,13 +1,13 @@
-import image1 from "../../assets/ShopCategories/Surface01.svg"
-import image2 from "../../assets/ShopCategories/Surface02.svg"
-import image3 from "../../assets/ShopCategories/Surface03.svg"
-import image4 from "../../assets/ShopCategories/Surface04.svg"
-import image5 from "../../assets/ShopCategories/Surface05.svg"
-import image6 from "../../assets/ShopCategories/Surface06.svg"
-import image7 from "../../assets/ShopCategories/Surface07.svg"
-import image8 from "../../assets/ShopCategories/Surface08.svg"
-import image9 from "../../assets/ShopCategories/Surface09.svg"
-import image10 from "../../assets/ShopCategories/Surface10.svg"
+import image1 from "../../assets/images/ShopCategories/Surface01.svg"
+import image2 from "../../assets/images/ShopCategories/Surface02.svg"
+import image3 from "../../assets/images/ShopCategories/Surface03.svg"
+import image4 from "../../assets/images/ShopCategories/Surface04.svg"
+import image5 from "../../assets/images/ShopCategories/Surface05.svg"
+import image6 from "../../assets/images/ShopCategories/Surface06.svg"
+import image7 from "../../assets/images/ShopCategories/Surface07.svg"
+import image8 from "../../assets/images/ShopCategories/Surface08.svg"
+import image9 from "../../assets/images/ShopCategories/Surface09.svg"
+import image10 from "../../assets/images/ShopCategories/Surface10.svg"
 
 const ShopData = [
     {

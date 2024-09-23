@@ -25,7 +25,7 @@ const DrawerComp = () => {
                     <Button  onClick={showDrawer}>
                         <FaBars/>
                     </Button>
-                    <Drawer title="Basic Drawer" onClose={onClose} open={open}>
+                    <Drawer onClose={onClose} open={open}>
                         <div className="flex">
                             <HeaderComponent />
                         </div>

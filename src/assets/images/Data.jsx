@@ -1,11 +1,11 @@
-import img1 from "../../assets/Categories/image1.svg"
-import img2 from "../../assets/Categories/image2.svg"
-import img3 from "../../assets/Categories/image3.svg"
-import img4 from "../../assets/Categories/image4.svg"
-import img5 from "../../assets/Categories/image5.svg"
-import img6 from "../../assets/Categories/image6.svg"
-import img7 from "../../assets/Categories/image7.svg"
-import img8 from "../../assets/Categories/image8.svg"
+import img1 from "../../assets/images/Categories/image1.svg"
+import img2 from "../../assets/images/Categories/image2.svg"
+import img3 from "../../assets/images/Categories/image3.svg"
+import img4 from "../../assets/images/Categories/image4.svg"
+import img5 from "../../assets/images/Categories/image5.svg"
+import img6 from "../../assets/images/Categories/image6.svg"
+import img7 from "../../assets/images/Categories/image7.svg"
+import img8 from "../../assets/images/Categories/image8.svg"
 
 const CategoriesData = [
     {

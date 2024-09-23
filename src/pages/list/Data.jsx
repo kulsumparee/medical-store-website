@@ -1,12 +1,12 @@
-import image1 from "../../assets/ShopCategories/Surface01.svg"
-import image2 from "../../assets/ShopCategories/Surface02.svg"
-import image3 from "../../assets/ShopCategories/Surface03.svg"
-import image4 from "../../assets/ShopCategories/Surface04.svg"
-import image5 from "../../assets/ShopCategories/Surface05.svg"
-import logo from "../../assets/graph 1.svg"
-import card1 from "../../assets/sallar/Surface 1.svg"
-import card2 from "../../assets/sallar/Surface 2.svg"
-import card3 from "../../assets/sallar/Surface 3.svg"
+import image1 from "../../assets/images/ShopCategories/Surface01.svg"
+import image2 from "../../assets/images/ShopCategories/Surface02.svg"
+import image3 from "../../assets/images/ShopCategories/Surface03.svg"
+import image4 from "../../assets/images/ShopCategories/Surface04.svg"
+import image5 from "../../assets/images/ShopCategories/Surface05.svg"
+import logo from "../../assets/images/graph 1.svg"
+import card1 from "../../assets/images/sallar/Surface 1.svg"
+import card2 from "../../assets/images/sallar/Surface 2.svg"
+import card3 from "../../assets/images/sallar/Surface 3.svg"
 
 
 export const ListData = [

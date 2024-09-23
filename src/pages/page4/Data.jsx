@@ -1,4 +1,4 @@
-import image1 from "../../assets/profile1.svg";
+import image1 from "../../assets/images/profile1.svg";
 
 const CardData = [
     {
