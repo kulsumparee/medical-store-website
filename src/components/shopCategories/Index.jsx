@@ -5,19 +5,40 @@ import { Rate } from 'antd'
 const ShopCategoriesComp = () => {
   return (
       <div>
-          <div className="lg:flex justify-between pb-10 px-5">
-              <h1 className=' flex justify-center pb-4 md:pb-0 font-semibold text-2xl'>Shop Categories</h1>
+          <div className="flex justify-between pb-10 px-5">
+              <h1 className=' flex justify-center pb-4 md:pb-0 font-semibold text-xl sm:text-2xl'>Shop Categories</h1>
 
               <nav>
-                  <ul className='flex flex-wrap justify-center gap-4 font-medium text-sm md:text-lg text-gray-500'>
-                      <li className=' cursor-pointer hover:border-b-2 border-black hover:text-black'>Electronic</li>
-                      <li className=' cursor-pointer hover:border-b-2 border-black hover:text-black'>Baby</li>
-                      <li className=' cursor-pointer hover:border-b-2 border-black hover:text-black'>Clothing</li>
-                      <li className=' cursor-pointer hover:border-b-2 border-black hover:text-black'>Furniture</li>
-                      <li className=' cursor-pointer hover:border-b-2 border-black hover:text-black'>Grocery</li>
-                      <li className=' cursor-pointer hover:border-b-2 border-black hover:text-black'>Toy&Video Game</li>
-                      <li className=' cursor-pointer hover:border-b-2 border-black hover:text-black'>Kitchen</li>
-                      <li className=' cursor-pointer hover:border-b-2 border-black hover:text-black'>Beauty</li>
+                  <div className="relative md:hidden">
+                      {/* Dropdown for small screens */}
+                      <select
+                          className="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  text-sm"
+                          onChange={(e) => {
+                              // Handle filter logic based on dropdown selection
+                              console.log(e.target.value);
+                          }}
+                      >
+                          <option value="Electronic">Electronic</option>
+                          <option value="Baby">Baby</option>
+                          <option value="Clothing">Clothing</option>
+                          <option value="Furniture">Furniture</option>
+                          <option value="Grocery">Grocery</option>
+                          <option value="Toy&VideoGame">Toy & Video Game</option>
+                          <option value="Kitchen">Kitchen</option>
+                          <option value="Beauty">Beauty</option>
+                      </select>
+                  </div>
+
+                  <ul className="hidden md:flex flex-wrap justify-center gap-4 font-medium text-sm md:text-lg text-gray-500">
+                      {/* Menu for larger screens */}
+                      <li className="cursor-pointer hover:border-b-2 border-black hover:text-black">Electronic</li>
+                      <li className="cursor-pointer hover:border-b-2 border-black hover:text-black">Baby</li>
+                      <li className="cursor-pointer hover:border-b-2 border-black hover:text-black">Clothing</li>
+                      <li className="cursor-pointer hover:border-b-2 border-black hover:text-black">Furniture</li>
+                      <li className="cursor-pointer hover:border-b-2 border-black hover:text-black">Grocery</li>
+                      <li className="cursor-pointer hover:border-b-2 border-black hover:text-black">Toy & Video Game</li>
+                      <li className="cursor-pointer hover:border-b-2 border-black hover:text-black">Kitchen</li>
+                      <li className="cursor-pointer hover:border-b-2 border-black hover:text-black">Beauty</li>
                   </ul>
               </nav>
           </div>

@@ -9,29 +9,27 @@ import PaginationComp from '../list/Pagination';
 import SingleCard from '../page3';
 
 const SecondPage = () => {
-    const [listData, setListData] = useState(true);
+    const [listData, setListData] = useState(true);  
     const [currentPage, setCurrentPage] = useState(1);
-    const [selectedItem, setSelectedItem] = useState(null);
+    const [selectedItem, setSelectedItem] = useState(null);  
 
-    const itemsPerPage = 15;
-
+    const itemsPerPage = 15; 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = FirstPageData.slice(indexOfFirstItem, indexOfLastItem);
+    const currentItems = FirstPageData.slice(indexOfFirstItem, indexOfLastItem);  
 
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);  
 
     const handleCardClick = (item) => {
-        setSelectedItem(item);
+        setSelectedItem(item);  
     };
 
     const handleBack = () => {
-        setSelectedItem(null);
+        setSelectedItem(null);  
     };
 
     if (selectedItem) {
-
-        return <SingleCard data={selectedItem} onBackClick={handleBack} />;
+        return <SingleCard data={selectedItem} onBackClick={handleBack} />;  
     }
 
     return (
@@ -43,11 +41,11 @@ const SecondPage = () => {
                 Home / Electronics / Computers / Desktop Computers
             </h1>
             <div>
-                <AntCarocel />
+                <AntCarocel />  
                 <div className='px-10'>
-                    <CommonData className="hidden" setListData={setListData} />
+                    <CommonData className="hidden" setListData={setListData} />  
                 </div>
-                {listData ? (
+                {listData ? ( 
                     <div>
                         <div className='pt-10 grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 justify-center gap-2'>
                             {currentItems.map((data) => (
@@ -67,14 +65,21 @@ const SecondPage = () => {
                             ))}
                         </div>
                         <div className=''>
-                            <PaginationComp currentPage={currentPage} itemsPerPage={itemsPerPage} totalItems={FirstPageData.length} paginate={paginate} />
+                            <PaginationComp
+                                currentPage={currentPage}
+                                itemsPerPage={itemsPerPage}
+                                totalItems={FirstPageData.length}
+                                paginate={paginate}
+                            />
                             <div>
-                                <h1 className='flex justify-center text-center'>1 – 20 of 300+ properties found</h1>
+                                <h1 className='flex justify-center text-center'>
+                                    1 – {currentItems.length} of {FirstPageData.length} properties found
+                                </h1>
                             </div>
                         </div>
                     </div>
                 ) : (
-                    <CardList />
+                    <CardList /> 
                 )}
             </div>
         </div>

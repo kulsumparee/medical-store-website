@@ -1,5 +1,4 @@
 import { ArrowLeftOutlined, DownOutlined } from '@ant-design/icons'
-import image1 from "../../assets/images/profile1.svg"
 import img1 from "../../assets/images/profile/heart 1.svg";
 import img2 from "../../assets/images/profile/graph 1.svg";
 import img3 from "../../assets/images/profile/question 1.svg";
@@ -16,7 +15,7 @@ import SallarComponent from '../../components/bestSellars/Index';
 import sallerProducts from '../../assets/MapData/bestSellarsData/data';
 import HomeData from '../../assets/MapData/bestSellarsData/HomeData';
 
-const SingleCard = ({ onBackClick }) => {
+const SingleCard = ({ onBackClick, data }) => {
     return (
         <div className=''>
             <div className=' flex flex-col-reverse  md:flex-row justify-between px-10'>
@@ -26,31 +25,36 @@ const SingleCard = ({ onBackClick }) => {
                 <button onClick={onBackClick}> <ArrowLeftOutlined /> Back to List</button>
             </div>
 
-            <div className=' grid grid-cols-12 px-10'>
+            <div className=' grid grid-cols-12 px-5 md:px-10'>
                 <div className=" col-span-12 md:col-span-2 flex md:flex-col mb-4 gap-x-3 gap-y-3 ">
 
-                    <Image src={image1} className="border-2 border-grey-200" width={100} />
-                    <Image src={image1} className="border-2 border-grey-100" width={100} />
-                    <Image src={image1} className="border-2 border-grey-100" width={100} />
+                    <Image src={data.image} className="border-2 border-grey-200" width={100} />
+                    <Image src={data.image} className="border-2 border-grey-100" width={100} />
+                    <Image src={data.image} className="border-2 border-grey-100" width={100} />
 
                 </div>
 
-                <div className=" col-span-12 md:col-span-6 lg:col-span-5 lg:pr-10">
-                    <Image src={image1} className="border-2 border-grey-100" />
+                <div className="col-span-12 md:col-span-6 lg:col-span-5 ">
+                    <Image
+                        src={data.image}
+                        width={300}
+                        height={300}
+                        className="border-2 border-grey-100 "
+                    />
                 </div>
 
                 <div className=" col-span-12 md:col-span-12 md:mx-20 lg:mx-0 mt-10 lg:mt-0 lg:col-span-5">
                     <div className="border-2 p-3 md:p-8  sm:mb-4 lg:mb-0  rounded-md ">
                         <div className="flex items-center">
-                            <h1 className="text-gray-500">APPLE</h1>
+                            <h1 className="text-gray-500">{data.brand }</h1>
                             <Divider type="vertical" />
-                            <span><Rate className=' flex gap-0 text-sm' /></span> <p className=" pl-2 text-sm">3,014 reviews</p>
+                            <span><Rate className=' flex gap-0 text-sm' /></span> <p className=" pl-2 text-sm">{data.reviews} </p>
                         </div>
-                        <h1 className="text-xl md:font-semibold my-4">Apple MacBook Pro 16" (2021) - Space Grey (Apple M1 Pro Chip / 1TB SSD / 16GB RAM)</h1>
+                        <h1 className="text-xl md:font-semibold my-4">{data.title} </h1>
                         <Divider />
                         <div className="flex gap-3">
-                            <h1 className="text-2xl font-semibold">$3.399</h1>
-                            <p className="text-xl line-through text-gray-500">$1,419.92</p>
+                            <h1 className="text-2xl font-semibold">{data.price} </h1>
+                            <p className="text-xl line-through text-gray-500">{data.originalPrice} </p>
                         </div>
 
                         <div className="mt-5 flex gap-3">
@@ -61,7 +65,10 @@ const SingleCard = ({ onBackClick }) => {
                                 </button></Link>
                         </div>
                         <div>
-                            <button className="flex justify-center flex-wrap items-center font-semibold py-3 border-2 rounded-full w-[100%] mt-5 border-[#F5C34B]">Buy Now</button>
+                            <Link to="/sign-in" >
+                                <button className="flex justify-center flex-wrap items-center font-semibold py-3 border-2 rounded-full w-[100%] mt-5 border-[#F5C34B]">Buy Now</button>
+                            </Link>
+
                             <div className=" flex flex-wrap mt-5 gap-1 items-center">
                                 <div className="flex text-center gap-1 text-xl"><img src={img1} width={20} alt="wishlist" /> wishlist</div>
                                 <Divider type="vertical" />

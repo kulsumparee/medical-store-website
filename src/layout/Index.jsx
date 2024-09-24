@@ -15,7 +15,7 @@ const Layout = () => {
   return (
     <Mainlayout>
       <HeroSecton />
-      {/* <CategoriesCompo /> */}
+      <CategoriesCompo />
       <SavingsCompo />
       <SallarComponent data={sallerProducts} navBar={"first"} />
       <HeadSetComp />

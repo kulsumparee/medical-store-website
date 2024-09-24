@@ -4,10 +4,9 @@ import { LeftOutlined, RightOutlined, HeartOutlined, ShareAltOutlined } from '@a
 import sallerProducts from '../../assets/MapData/bestSellarsData/data';
 
 const SallarComponent = ({ navBar, data }) => {
+
     const [jsonData, setJsonData] = useState(data)
-
     const carouselRef = useRef(null);
-
     const handlePrev = () => {
         carouselRef.current.prev();
     };
@@ -16,9 +15,27 @@ const SallarComponent = ({ navBar, data }) => {
         carouselRef.current.next();
     };
 
+    function FilterData(para) {
+
+        if (para.target.innerText === "Top20") {
+            setJsonData(data)
+        } else if (para.target.innerText === "Baby") {
+            setJsonData(data.filter(f => f.name === "baby"))
+
+        } else if (para.target.innerText === "Furniture") {
+            setJsonData(data.filter(f => f.name === "furniture"))
+
+        } else if (para.target.innerText === "Electronic") {
+            setJsonData(data.filter(f => f.name === "electronic"))
+
+        } else if (para.target.innerText === "All") {
+            setJsonData(data)
+        }
+    }
+
     return (
-        <div className="py-20 sm:px-5 w-full h-full relative">
-            <div className="sm:flex text-center sm:justify-between pb-5">
+        <div className="py-20  w-full h-full relative px-5">
+            <div className="flex text-center justify-between pb-5">
 
                 <div>
                     {navBar === "first" ?
@@ -27,7 +44,7 @@ const SallarComponent = ({ navBar, data }) => {
 
                         : navBar === "second" ?
 
-                            <h1 className="text-2xl font-bold">Save on TV, video, & home audio</h1>
+                            <h1 className="text-xl font-bold">Save on TV, video, & home audio</h1>
 
                             : navBar === "third" ?
                                 <h1 className="text-2xl font-bold">Top-rated products</h1>
@@ -41,29 +58,55 @@ const SallarComponent = ({ navBar, data }) => {
                 </div>
 
                 <div>
+
                     <nav>
-                        <ul className="flex justify-center gap-5 text-lg font-medium cursor-pointer">
-                            {navBar === "first" ?
+                        <div>
+                            {navBar === "first" ? (
                                 <>
-                                    <li>Top20</li>
-                                    <li>Baby</li>
-                                    <li>Furniture</li>
-                                    <li>Electronic</li>
-                                    <li>All</li>
+                                    <div className="relative md:hidden">
+                                        {/* Dropdown for small screens */}
+                                        <select
+                                            className="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none text-sm"
+                                            onChange={(e) => {
+                                                // Handle filter logic based on dropdown selection
+                                                console.log(e.target.value);
+                                            }}
+                                        >
+                                            <option value="Electronic">Top20</option>
+                                            <option value="Baby">Baby</option>
+                                            <option value="Furniture">Furniture</option>
+                                            <option value="Electronic">Electronic</option>
+                                            <option value="All">All</option>
+                                           
+                                        </select>
+                                    </div>
+
+                                    <ul className="hidden md:flex justify-center gap-5 text-lg font-medium cursor-pointer">
+                                        <li onClick={FilterData}>Top20</li>
+                                        <li onClick={FilterData}>Baby</li>
+                                        <li onClick={FilterData}>Furniture</li>
+                                        <li onClick={FilterData}>Electronic</li>
+                                        <li onClick={FilterData}>All</li>
+                                    </ul>
                                 </>
-                                : navBar === "second" ?
-                                    <li className=''><span className='hover:underline'>See</span> All</li>
-                                    : navBar === "third" ?
-                                        <li className=''><span className='hover:underline'>See</span> All</li>
-                                        : navBar === "forth" ?
-                                            <></>
-                                            : navBar === "fifth" ?
-                                                <></>
-                                                : "none"
-                            }
-                        </ul>
+                            ) : navBar === "second" ? (
+                                <ul className=" min-w-max text-lg font-medium cursor-pointer">
+                                    <li className="">
+                                        <span className="hover:underline">See</span> All
+                                    </li>
+                                </ul>
+                            ) : navBar === "third" ? (
+                                <ul className="flex justify-center gap-5 text-lg font-medium cursor-pointer">
+                                    <li className="">
+                                        <span className="hover:underline">See</span> All
+                                    </li>
+                                </ul>
+                            ) : null}
+                        </div>
                     </nav>
+
                 </div>
+                
             </div>
             <Carousel
                 ref={carouselRef}
@@ -83,7 +126,7 @@ const SallarComponent = ({ navBar, data }) => {
                         <div className="relative">
                             <img src={data.image} alt={data.title} width={240} height={240} className="w-full" />
 
-                            {/* Hover buttons */}
+
                             <div className="absolute flex flex-col top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 space-y-2">
                                 <button className="bg-white rounded-full w-10 h-10 shadow-md hover:bg-yellow-500">
                                     <HeartOutlined />
@@ -93,7 +136,7 @@ const SallarComponent = ({ navBar, data }) => {
                                 </button>
                             </div>
 
-                            {/* Add to Cart Button */}
+
                             <div className="absolute bottom-0 left-0 w-full bg-yellow-500 text-white text-center py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
                                 Add to Cart
                             </div>
@@ -115,7 +158,6 @@ const SallarComponent = ({ navBar, data }) => {
                 ))}
             </Carousel>
 
-            {/* Prev and Next buttons */}
             <div className="flex absolute top-1/2 left-0 right-0 justify-between px-4 transform -translate-y-1/2">
                 <button
                     onClick={handlePrev}

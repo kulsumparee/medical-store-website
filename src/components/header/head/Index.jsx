@@ -15,7 +15,7 @@ const HeaderComponent = () => {
 
     return (
         <div className="  flex flex-col">
-            <div className=" relative top-40 md:top-0 md:flex justify-between md:px-2 gap-x-1 lg:px-10 text-md items-center pt-3">
+            <div className=" relative top-48 md:top-0 md:flex justify-between md:px-2 gap-x-1 lg:px-10 text-md items-center pt-3">
                 <div className=" pb-3 md:pb-0 text-lg md:text-sm font-semibold md:font-normal">
                     <p className="  ">Free Express Shipping on orders $200!</p>
                 </div>
