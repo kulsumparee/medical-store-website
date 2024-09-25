@@ -7,9 +7,9 @@ import comma from "../../assets/images/comma.svg"
 const HeadSetPage = () => {
   return (
       <div className=' pt-5 sm:pt-10   '>
-          <img src={img1} alt="" className='' />
+          <img src={img1} alt="" className='h-full w-full' />
 
-      <div className=' relative pt-5 px-56'>
+      <div className=' relative pt-5 px-10 md:px-56'>
         {
           HeadsetData.map(data => 
           <div>
@@ -31,9 +31,9 @@ const HeadSetPage = () => {
                 </ul>
               </nav>
 
-              <div className=' py-8 flex gap-14 items-center'>
-                <div className=' flex items-start gap-10 '>
-                  <img src={line} alt="hjkdgsk" />
+              <div className=' md:py-8 flex gap-5 md:gap-14 items-center'>
+                <div className=' flex items-start md:gap-10 '>
+                  <img src={line} alt="hjkdgsk" className=' w-full h-[50vh] md:h-full' />
                   <img src={comma} alt="hjkdgsk" />
                 </div>
                 <p className=' font-semibold text-lg'>
@@ -47,7 +47,6 @@ const HeadSetPage = () => {
               <div>
                 {data.title4}
               </div>
-              
 
               <div className=' flex gap-5 py-5'>
                 <div>

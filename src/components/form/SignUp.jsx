@@ -30,7 +30,7 @@ const SignUpForm = () => {
 
                     <div className=' flex flex-col  pt-5'>
                         <label className=' font-semibold text-lg ' htmlFor="country">Country</label>
-                        <select className='py-2 w-full border rounded-md border-stone-200 mt-2 px-2 focus:outline-none' name="" id="">
+                        <select className='py-2 w-full border rounded-md border-stone-200 mt-2 px-2 focus:outline-none' name="country" id="country">
                             <option value="">select</option>
                             <option value="">Pakistan</option>
                             <option value="">India</option>

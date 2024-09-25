@@ -1,6 +1,6 @@
-import { FaFacebookF, FaLinkedinIn, FaPhone, FaRegHeart, FaSearch, FaShoppingCart } from "react-icons/fa"
+import { FaFacebookF, FaLinkedinIn,  FaRegHeart, FaSearch, } from "react-icons/fa"
 import DropdownComp from "../dropdown/Index"
-import { FaInstagram, FaPerson,  FaTwitter } from "react-icons/fa6"
+import { FaInstagram, FaTwitter } from "react-icons/fa6"
 import Navlogo from "../../../assets/images/pakdeals.svg"
 import { Divider } from "antd"
 import Line from "../../../assets/images/line.svg"
@@ -44,8 +44,8 @@ const HeaderComponent = () => {
                         <input
                             className="border-2 py-2 rounded-full w-full pl-3"
                             type="text"
-                            name="" id=""
-                            placeholder=" Search products.." />
+                            name="" id="products"
+                            placeholder="" />
                         <div className=" flex left-[45%] md:left-[54%] lg:left-[68%] cursor-pointer gap-3 items-end min-w-max absolute">
                             <Divider type="vertical" />
                             <DropdownComp title="All Categories" />
@@ -61,21 +61,21 @@ const HeaderComponent = () => {
                         <h1>Wishlist</h1>
                     </div>
 
-                   
-                       
-                        <Link to="/sign-in" className="flex items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
+
+
+                    <Link to="/sign-in" className="flex items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
                         <img src={imds} alt="account" />
-                            <h1>SignIn</h1>
-                        </Link>
-                   
+                        <h1>SignIn</h1>
+                    </Link>
+
 
                     <div className="flex items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
                         <img src={cart} alt="account" />
                         <h1>Cart</h1>
                     </div>
-                    
-                    
-    
+
+
+
 
                 </div>
 
@@ -85,7 +85,7 @@ const HeaderComponent = () => {
                 <img src={Line} alt="line" height={140} />
             </div>
 
-           
+
         </div>
     )
 }

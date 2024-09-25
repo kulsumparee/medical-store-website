@@ -23,7 +23,10 @@ const SignInForm = () => {
                   <div className=' mt-5'>
                       <label className=' font-semibold text-lg' htmlFor="">Password</label>
                       <div className="flex items-center relative ">
-                      <input
+                          <input
+                              id='sign-in'
+                              
+                          
                           type={showPassword ? "text" : "password"}
                           className="py-2 w-full border rounded-md border-stone-200 mt-2 px-2 focus:outline-none"
                           placeholder="Enter your password"

@@ -33,7 +33,7 @@ const CheckoutCard = () => {
 
             <div className=" pt-5">
               <label htmlFor="" className='font-semibold text-lg '>Country / Region *</label> <br />
-              <select className='py-2 w-full border rounded-md border-stone-200 mt-2 focus:outline-none ' name="" id="">
+              <select className='py-2 w-full border rounded-md border-stone-200 mt-2 focus:outline-none ' name="" id="region">
                 <option value="">select</option>
                 <option value="">Pakistan</option>
                 <option value="">India</option>
@@ -54,7 +54,7 @@ const CheckoutCard = () => {
 
             <div className=" pt-5">
               <label htmlFor="" className='font-semibold text-lg ' > State *</label> <br />
-              <select className=' py-2 w-full border rounded-md border-stone-200 mt-2 px-2 focus:outline-none' name="" id="">
+              <select className=' py-2 w-full border rounded-md border-stone-200 mt-2 px-2 focus:outline-none' name="state" id="state">
                 <option value="">select</option>
               </select>
             </div>
@@ -69,7 +69,7 @@ const CheckoutCard = () => {
             </div>
 
             <div className='flex gap-3 py-5'>
-              <input type="checkbox" name="" id="" className='focus:outline-none' />
+              <input type="checkbox" name="" id="account" className='focus:outline-none' />
               <label className=' font-semibold text-lg ' htmlFor="">Create an account?</label>
             </div>
 
@@ -77,7 +77,7 @@ const CheckoutCard = () => {
               <h1 className=' text-xl font-semibold py-2'>Shipping details</h1>
 
               <div className='flex gap-3 py-5'>
-                <input type="checkbox" name="" id="" className='' />
+                <input type="checkbox" name="" id="address" className='' />
                 <label className=' font-semibold text-lg ' htmlFor="">Ship to a different address?</label>
               </div>
             </div>
@@ -139,7 +139,7 @@ const CheckoutCard = () => {
               </div>
 
               <div className=' flex gap-4 items-start pt-10'>
-                <input type="checkbox" name="" id="" className=' mt-2' />
+                <input type="checkbox" name="" id="personal-data" className=' mt-2' />
                 <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
               </div>
 

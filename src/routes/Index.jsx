@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Layout from "../layout/Index"
 import FirstScreen from '../pages/page1/Index';
 import DrawerComp from '../components/header/Drawer';
@@ -18,7 +18,7 @@ const AppContent = () => {
     const location = useLocation();
     console.log(location, "location");
 
-    const shouldShowHeaderAndFooter = !['/sign-in', '/sign-up'].includes(location.pathname);
+    const shouldShowHeaderAndFooter = !['/sign-In', '/sign-Up', '/forget-password'].includes(location.pathname);
     return (
         <>
             {shouldShowHeaderAndFooter && <DrawerComp />}

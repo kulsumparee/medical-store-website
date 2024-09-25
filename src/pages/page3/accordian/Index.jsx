@@ -281,22 +281,22 @@ function AccordionUsage() {
 
                                     <p className=' text-lg my-3'>Your review</p>
                                     <form action="">
-                                        <textarea className=' p-3 w-full h-80 border-2 rounded-md' name="text" id="" placeholder=' write yout thex here...' />
+                                        <textarea className=' p-3 w-full h-80 border-2 rounded-md' name="text" id="text" placeholder=' write yout thex here...' />
 
                                         <div className=' grid grid-cols-1 md:grid-cols-2  gap-x-10 gap-y-5 pt-3'>
                                             <div className=''>
                                                 <label className=' text-lg font-semibold ' htmlFor="name">Name</label> <br />
-                                                <input className=' border-2 py-1 w-full mt-2 p-2 rounded-md' type="text" name="" id="" placeholder='Your Name' />
+                                                <input className=' border-2 py-1 w-full mt-2 p-2 rounded-md' type="text" name="" id="names" placeholder='Your Name' />
                                             </div>
 
                                             <div className=''>
                                                 <label className=' text-lg font-semibold ' htmlFor="name">Email</label> <br />
-                                                <input className=' border-2 py-1 w-full mt-2 p-2 rounded-md' type="text" name="" id="" placeholder='Your Email' />
+                                                <input className=' border-2 py-1 w-full mt-2 p-2 rounded-md' type="text" name="" id="Email" placeholder='Your Email' />
                                             </div>
                                         </div>
 
                                         <div className=' flex gap-2 my-4'>
-                                            <input type="checkbox" name="" id="" />
+                                            <input type="checkbox" name="name" id="name-here" />
                                             <label htmlFor="">Save my name, email, and website in this browser for the next time I comment.</label>
                                         </div>
 

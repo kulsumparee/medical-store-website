@@ -17,7 +17,7 @@ const FooterSec = () => {
           <div className="flex flex-col items-center ">
               <h1 className=' text-xl sm:text-2xl font-semibold py-3'>Subscribe and get 20% discount.</h1>
               <div className="flex gap-5">
-                  <input type="text" name="" id=""
+                  <input type="text" name="" id="email"
                       placeholder='your email address'
                       className=' border border-[#F3F5F6] py-3 w-[200px] sm:w-[400px] md::w-[500px] rounded-md pl-3 placeholder-black'
                   />
