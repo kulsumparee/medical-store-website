@@ -14,7 +14,7 @@ const CommonData = ({ setFilterData, setListData, className }) => {
           <Divider />
 
           <div className='flex flex-col md:flex-row items-center space-y-5 md:justify-between'>
-              <div className='flex'>
+              <div className='flex justify-between'>
                   <div onClick={() => setFilterData(false)} className={`flex items-center gap-2 bg-stone-100 px-4 rounded-full cursor-pointer ${className}`}>
                       <FaFilter className={`text-sm ${className}`} />
                       <h1> Fliter</h1>

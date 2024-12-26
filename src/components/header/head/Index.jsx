@@ -34,7 +34,7 @@ const HeaderComponent = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-12 md:px-2 lg:px-10 space-x-2 text-md items-center relative bottom-28 md:bottom-0 md:top-3 ">
+            <div className="grid grid-cols-12 md:px-2 lg:px-10 space-x-2 text-md  relative bottom-28 md:bottom-0 md:top-2 ">
                 <div className="  col-span-12 md:col-span-2 flex  justify-center ">
                     <img src={Navlogo} alt="logo1" width={157} height={57} />
                 </div>
@@ -42,7 +42,7 @@ const HeaderComponent = () => {
                 <div className=" col-span-12  md:col-span-6  ">
                     <div className=" py-4 md:pb-0 flex items-center relative ">
                         <input
-                            className="border-2 py-2 rounded-full w-full pl-3"
+                            className="border-2 py-2 rounded-full w-full pl-3 focus:outline-none"
                             type="text"
                             name="" id="products"
                             placeholder="" />

@@ -1,15 +1,10 @@
 import React from 'react';
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space, Typography } from 'antd';
-import { StyleDropdown } from './Styles';
-
-
- 
-
-
 
 const DropdownComp = ({ title, item1, item2, item3, item4, item5 }) => (
     <Dropdown
+    
         menu={{
             items: [
                 {
@@ -37,15 +32,15 @@ const DropdownComp = ({ title, item1, item2, item3, item4, item5 }) => (
             defaultSelectedKeys: ['5'],
         }}
     >
-        <StyleDropdown>
+        <div className=' text-black'>
 
-        <Typography.Link>
+            <Typography.Link style={{ color: 'black' }}>
             <Space>
                 {title}
                 <DownOutlined />
             </Space>
         </Typography.Link>
-        </StyleDropdown>
+        </div>
     </Dropdown>
 );
 export default DropdownComp;

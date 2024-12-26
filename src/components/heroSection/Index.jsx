@@ -1,4 +1,3 @@
-import React from 'react'
 import AntCarocel from './Carocel'
 
 const HeroSecton = () => {

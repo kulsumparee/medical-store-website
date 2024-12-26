@@ -1,5 +1,4 @@
-import React from 'react'
-import img1 from "../../assets/images/hedset/bg.svg"
+import img1 from "../../assets/images/hedset/banner2.jpg"
 import HeadsetData from '../../assets/MapData/pages/headsetData/Data'
 import line from "../../assets/images/Rectangle.svg"
 import comma from "../../assets/images/comma.svg"
@@ -22,11 +21,11 @@ const HeadSetPage = () => {
             </h1>
               <p className=' py-5'>{data.title2} </p>
               <nav>
-                <ul className=' flex flex-col gap-y-3'>
-                  <li>Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida.</li>
-                  <li>At urna condimentum mattis pellentesque id nibh. Laoreet non curabitur</li>
-                  <li>Magna etiam tempor orci eu lobortis elementum.</li>
-                  <li>
+                <ul className='  flex flex-col gap-y-3 pl-5'>
+                  <li className=' list-disc'>Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida.</li>
+                  <li className=' list-disc'>At urna condimentum mattis pellentesque id nibh. Laoreet non curabitur</li>
+                  <li className=' list-disc'>Magna etiam tempor orci eu lobortis elementum.</li>
+                  <li className=' list-disc'>
                     Bibendum est ultricies integer quis. Semper eget duis at tellus.</li>
                 </ul>
               </nav>

@@ -2,7 +2,7 @@ import { Divider, Image, Rate } from 'antd'
 import React, { useState } from 'react'
 import { ListData } from '../../assets/MapData/pages/listData/Data'
 import PaginationComp from './Pagination'
-import Button from '../../components/Button/Button'
+import { Link } from 'react-router-dom'
 
 const CardList = () => {
   const [value, setValue] = useState(3);
@@ -18,7 +18,7 @@ const CardList = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 
-  const [cartData, setCartData] = useState(false)
+ 
   return (
     <>
      
@@ -61,8 +61,9 @@ const CardList = () => {
                 <h1 className=' text-gray-500 line-through'>{data.originalPrice}</h1>
               </div>
              
-              <button onClick={() => setCartData(false)} className=' my-2 font-semibold  px-10  md:px-20 md:text-sm lg:text-sm  lg:px-16 py-3 bg-[#F5C34B] rounded-sm'>{data.button}</button>
-
+              <Link to="/cart">
+                <button className=' my-2 font-semibold  px-10  md:px-20 md:text-sm lg:text-sm  lg:px-16 py-3 bg-[#F5C34B] rounded-sm'>{data.button}</button>
+              </Link>
               <div className=' flex hover:cursor-pointer'>
                 <h1 className=' '>{data.text}</h1>
                 <Divider className='' type='vertical' />

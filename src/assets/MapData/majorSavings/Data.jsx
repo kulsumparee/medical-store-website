@@ -1,40 +1,46 @@
-import img1 from "../../images/major/images (1).svg"
-import img2 from "../../images/major/images (2).svg"
-import img3 from "../../images/major/images (3).svg"
-import img4 from "../../images/major/images (4).svg"
-import img5 from "../../images/major/images (5).svg"
-import img6 from "../../images/major/images (7).svg"
+import img1 from "../../images/major/medicine.jpeg"
+import img2 from "../../images/major/wheelchair.jpg"
+import img3 from "../../images/major/surgical.webp"
+import img4 from "../../images/major/baby.webp"
+import img5 from "../../images/major/walker.jpg"
+import img6 from "../../images/major/toilet.avif"
 
 const SavingsData = [
     {
         id: 1,
         image: img1,
-        title: "Up to 40% off fashion",
+        title: "Medicines",
+        para: "Prescription and over-the-counter medications."
     },
     {
         id: 2,
         image: img2,
-        title: "Up to 25% off tech",
+        title: "Mobility Aids",
+        para: "Enhancing mobility with our range of wheelchairs."
     },
     {
         id: 3,
         image: img3,
-        title: "Up to 75% off grocery",
+        title: "Surgical Items",
+        para:"Essential tools and equipment for surgeries."
     },
     {
         id: 4,
         image: img4,
-        title: "Up to 30% off home",
+        title: "Baby Care Products",
+        para: "Gentle and safe products for your little ones."
     },
     {
         id: 5,
         image: img5,
-        title: "Up to 15% off sports",
+        title: "Patient Walker",
+        para: "Providing support and stability for patient mobility."
     },
     {
         id: 6,
         image: img6,
-        title: "Up to 25% off electronics",
+        title: "Toilet Seat",
+        para: "Comfortable and hygienic toilet seats for patient care."
     },
 ];
 

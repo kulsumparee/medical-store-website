@@ -11,42 +11,42 @@ const CategoriesData = [
     {
         id: 1,
         image: img1 ,
-        title: "Electronics"
+        title: "General Medicine"
     },
     {
         id: 2,
         image: img2,
-        title: "Clothings"
+        title: "Pediatrics"
     },
     {
         id: 3,
         image: img3,
-        title: "Health & bauty"
+        title: "Surgery"
     },
     {
         id: 4,
         image: img4,
-        title: "Home & Kitchen"
+        title: "Emergency Services"
     },
     {
         id: 5,
         image: img5,
-        title: "Home & Furniture"
+        title: "Maternity"
     },
     {
         id: 6,
         image: img6,
-        title: "Grocery & Market"
+        title: "Diagnostics"
     },
     {
         id: 7,
         image: img7,
-        title: "Toy & Video Games"
+        title: "Pharmacy"
     },
     {
         id: 8,
         image: img8,
-        title: "Babies & Moms"
+        title: "Wellness Programs"
     },
 ];
 export default CategoriesData;
