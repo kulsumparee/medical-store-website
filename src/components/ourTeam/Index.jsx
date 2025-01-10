@@ -15,7 +15,7 @@ const MeetOurTeam = () => {
     return (
         <div className=" my-32 relative ">
             <div className=" ">
-                <h1 className=" text-4xl text-cyan-500 font-semibold py-8 text-center ">
+                <h1 className=" md:text-3xl text-xl font-semibold text-cyan-500 py-8 text-center ">
                     Meet Our Team
                 </h1>
                 {/* <div className=" grid grid-cols-3 gap-5">

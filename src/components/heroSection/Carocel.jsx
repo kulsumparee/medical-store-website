@@ -18,23 +18,40 @@ const AntCarocel = () => {
 
     return (
         <>
-            <div className="relative w-full h-full">
-                <Carousel ref={Navigate} dots={false} className="AntCarocel">
-                    {CaroselData && CaroselData.map(data => (
-                        <div key={data.id} className='relative md:h-[100vh] h-[90vh] text-white w-full'>
-                            <img src={data.src} style={{ height: "100vh", width: "100%" }} alt="carocel" className='object-cover' />
-                            <div className="absolute inset-0 flex flex-col items-center text-center top-10">
-                                
-                                <h1 className='text-4xl md:text-6xl font-bold lg:text-7xl py-2'>{data.Heading1}</h1>
-                                <h1 className='text-4xl md:text-3xl lg:text-6xl'>{data.Heading2}</h1>
-                                <p className='text-lg md:text-xl sm:py-3'>{data.paragraph}</p>
-                                <Link to="/shopNow" className=' hover:text-white'>
-                                    <Button title="Learn More" className="sm:py-3 px-4 mt-10 text-xl " />
-                                </Link>
+            <div className="relative w-full">
+                <Carousel ref={Navigate} dots={false} className="AntCarousel">
+                    {CaroselData &&
+                        CaroselData.map((data) => (
+                            <div
+                                key={data.id}
+                                className="relative h-[50vh] sm:h-[60vh] md:h-[80vh] lg:h-[100vh] text-white w-full"
+                            >
+                                <img
+                                    src={data.src}
+                                    alt="carousel"
+                                    className="object-cover w-full h-full"
+                                />
+                                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+                                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold py-2">
+                                        {data.Heading1}
+                                    </h1>
+                                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                                        {data.Heading2}
+                                    </h1>
+                                    <p className="text-sm sm:text-lg md:text-xl lg:text-2xl py-3">
+                                        {data.paragraph}
+                                    </p>
+                                    <Link to="/shopNow" className="hover:text-white">
+                                        <Button
+                                            title="Learn More"
+                                            className="sm:py-3 px-4 mt-10 text-base sm:text-lg lg:text-xl"
+                                        />
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                 </Carousel>
+
 
                 
                 <button

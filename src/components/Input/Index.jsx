@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Input = ({ title, text, className, type }) => {
   

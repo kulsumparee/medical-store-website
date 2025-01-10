@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import AntCarocel from './Carocel';
 import Line from "../../assets/images/line.svg";
 import CommonData from '../Common';
@@ -50,7 +50,9 @@ const SecondPage = () => {
                         <div className='pt-10 grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 justify-center gap-2'>
                             {currentItems.map((data) => (
                                 <div key={data.id} className="p-2 border" onClick={() => handleCardClick(data)}>
-                                    <img src={data.image} alt={data.title} />
+                                    <div className='w-full h-52'>
+                                        <img src={data.image} alt={data.title} className='w-full h-full' />
+                                    </div>
                                     <h1 className='font-semibold text-zinc-400'>{data.brand}</h1>
                                     <h1 className='flex flex-wrap w-52 sm:w-full py-2 font-medium'>{data.title}</h1>
                                     <div className="flex gap-2">

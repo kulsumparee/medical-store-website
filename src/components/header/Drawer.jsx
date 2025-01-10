@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button, Drawer, Grid } from 'antd';
 import HeaderComponent from './head/Index';
-import { FaCross } from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa6';
 
 const { useBreakpoint } = Grid;

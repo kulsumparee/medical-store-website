@@ -5,9 +5,9 @@ import HealthCare from '../components/healthCare/Index'
 import HeadSetComp from '../components/headSet/Index'
 import SallarComponent from '../components/bestSellars/Index'
 import sallerProducts from '../assets/MapData/bestSellarsData/data'
-import MeetOurTeam from '../components/ourTeam/Index'
 import ShopCategoriesComp from "../components/shopCategories/Index"
 import OurReviews from '../components/reviews/Index'
+import ResponsiveSwiper from '../components/team/Index'
 
 const Layout = () => {
   return (
@@ -15,11 +15,12 @@ const Layout = () => {
       <HeroSecton />
       <CategoriesCompo />
       <HealthCare />
-      <SallarComponent data={sallerProducts} navBar={"first"} />
+      <SallarComponent  data={sallerProducts} navBar={"first"} />
       <HeadSetComp />
       {/* <SallarComponent data={HomeData} navBar={"second"} /> */}
       <ShopCategoriesComp />
-      <MeetOurTeam/>
+      <ResponsiveSwiper/>
+      {/* <MeetOurTeam/> */}
       {/* <HeadSet2Comp /> */}
       <SallarComponent data={sallerProducts} navBar={"third"} />
       <OurReviews/>

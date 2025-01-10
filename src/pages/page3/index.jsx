@@ -7,7 +7,6 @@ import img5 from "../../assets/images/profile/truck 1.svg";
 import img6 from "../../assets/images/profile/shop 1.svg";
 import img7 from "../../assets/images/profile/return-box 1.svg";
 import { Divider, Image, Rate } from 'antd'
-import React from 'react'
 import Counter from './counter'
 import AccordionUsage from './accordian/Index';
 import { Link } from 'react-router-dom';

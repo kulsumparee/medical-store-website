@@ -1,5 +1,4 @@
 import { Box, Slider } from '@mui/material'
-import React from 'react'
 import ClearIcon from '@mui/icons-material/Clear';
 import CardData from './Data';
 import Counter from '../page3/counter';

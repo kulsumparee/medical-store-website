@@ -2,8 +2,8 @@ import { doctors } from "../../assets/MapData/reviewsData/Data"
 
 const OurReviews = () => {
   return (
-      <div className="container mx-auto text-center py-20">
-          <h2 className="text-3xl text-cyan-500 font-semibold mb-6">Recommended by Experts</h2>
+      <div className="container mx-auto text-center py-20 px-10">
+          <h2 className="text-4xl text-cyan-500 font-semibold mb-6">Recommended by Experts</h2>
           <p className="text-gray-600 mb-8">
               Our medical store is trusted by top doctors for providing quality substances.
           </p>

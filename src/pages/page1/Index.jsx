@@ -1,5 +1,5 @@
-import { Divider, Pagination, Rate } from 'antd'
-import React, { useState } from 'react'
+import { Rate } from 'antd'
+import { useState } from 'react'
 import { FirstPageData } from '../../assets/MapData/pages/page1Data/Data'
 import CardList from '../list/Index'
 import PaginationComp from '../list/Pagination'
@@ -28,7 +28,7 @@ const FirstScreen = () => {
     <>
 
       {filterData ? (
-        <div div className='px-5 lg:px-10' >
+        <div className='px-5 lg:px-10' >
           <h1 className=' text-md sm:text-lg  pt-10'>Home  /  Electronics  /  Computers  /  Desktop Computers</h1>
           <CommonData setFilterData={setFilterData} setListData={setListData} />
 
@@ -38,7 +38,9 @@ const FirstScreen = () => {
                 {
                   currentItems.map(data =>
                     <div key={data.id} className="p-2 border">
-                      <img src={data.image} alt="" />
+                      <div className='w-full h-56'>
+                        <img src={data.image} alt="card" className=' w-full h-full' />
+                     </div>
                       <h1 className=' font-semibold text-zinc-400'>{data.brand}</h1>
                       <h1 className=' flex flex-wrap w-52 sm:w-full py-2 font-medium'>{data.title}</h1>
                       <div className="flex gap-2">
