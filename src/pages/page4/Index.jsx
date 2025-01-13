@@ -5,20 +5,19 @@ import Counter from '../page3/counter';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 
-const AddToCartPage
-    = () => {
+const AddToCartPage = () => {
+
         return (
             <div className='px-5'>
                 <h1 className=' py-10 text-md sm:text-lg pt-10'>
-                    Home / Electronics / Computers / Desktop Computers
-                </h1>
+                 Home / Healthcare / Medical Supplies / Health Products </h1>
 
                 <div className=' flex flex-col items-center text-center pb-10'>
                     <h1 className=' text-2xl font-bold'>Shopping Cart</h1>
                     <div className=' flex flex-col '>
-                        <p className=' my-4 '>Exclusive Offer about Magic Club</p>
+                        <p className=' my-4'>Exclusive Offer about Magic Club</p>
                         <div>
-                            <Box sx={{ width: 300 }}>
+                            <Box className=" w-[250px] md:w-[300px]">
                                 <Slider color='warning' defaultValue={60} aria-label="Default" valueLabelDisplay="auto" />
                             </Box>
                         </div>
@@ -42,6 +41,9 @@ const AddToCartPage
                                 </thead>
 
                                 <tbody>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
                                     {CardData.map((data, index) => (
                                         <tr key={index} className="border-b hover:bg-gray-50">
                                             <td className="px-4 py-2">
@@ -69,13 +71,13 @@ const AddToCartPage
 
                         <div className=" sm:flex justify-between py-10">
 
-                            <div className=' border-2 border-dashed text-lg  flex p-3 gap-14 rounded-md mb-5'>
+                            <div className=' border-2 border-dashed md:text-lg flex p-3  justify-between gap-1 rounded-md mb-5 w-full max-w-[300px]'>
                                 <p>Coupon code</p>
                                 <p>Apply Coupon</p>
                             </div>
 
-                            <div className=" flex gap-5">
-                                <Button title="Continue Shopping" className="bg-transparent border-2 py-1 border-[#F5C34B] " />
+                            <div className=" md:flex gap-5 items-center text-center grid gap-4">
+                                <Button title="Continue Shopping" className="bg-transparent border-2 py-1 border-cyan-500 " />
                                 <Button title="Update Cart" className=""/>
 
                             </div>

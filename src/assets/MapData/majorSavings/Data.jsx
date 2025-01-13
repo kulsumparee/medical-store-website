@@ -10,13 +10,17 @@ const SavingsData = [
         id: 1,
         image: img1,
         title: "Medicines",
-        para: "Prescription and over-the-counter medications."
+        para: "Prescription and over-the-counter medications.",
+        name: "prescription"
+        
     },
     {
         id: 2,
         image: img2,
         title: "Mobility Aids",
-        para: "Enhancing mobility with our range of wheelchairs."
+        para: "Enhancing mobility with our range of wheelchairs.",
+        name: "wheelchair"
+
     },
     {
         id: 3,

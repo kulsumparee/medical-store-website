@@ -1,6 +1,6 @@
-import image1 from "../../../images/carosel1.svg"
-import image2 from "../../../images/carosel2.jpg"
-import image3 from "../../../images/carosel3.jpg"
+import image1 from "../../../images/sallar/wheelchair12.jpg"
+import image2 from "../../../images/carocel/medicine home.avif"
+import image3 from "../../../images/carocel/baby home.jpg"
 
 const CarocelData = [
 

@@ -38,18 +38,17 @@ const SecondPage = () => {
                 <img src={Line} alt="Line" />
             </div>
             <h1 className='px-10 py-10 text-md sm:text-lg pt-10'>
-                Home / Electronics / Computers / Desktop Computers
-            </h1>
+             Home / Healthcare / Medical Supplies / Health Products            </h1>
             <div>
                 <AntCarocel />  
-                <div className='px-10'>
+                <div className=' px-5 md:px-10'>
                     <CommonData className="hidden" setListData={setListData} />  
                 </div>
                 {listData ? ( 
                     <div>
                         <div className='pt-10 grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 justify-center gap-2'>
                             {currentItems.map((data) => (
-                                <div key={data.id} className="p-2 border" onClick={() => handleCardClick(data)}>
+                                <div key={data.id} className="p-2 md:border" onClick={() => handleCardClick(data)}>
                                     <div className='w-full h-52'>
                                         <img src={data.image} alt={data.title} className='w-full h-full' />
                                     </div>

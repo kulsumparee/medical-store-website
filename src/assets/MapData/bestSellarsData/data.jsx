@@ -16,7 +16,7 @@ import sallar00 from "../../images/sallar/medicine2.jpg"
 
 const sallerProducts = [
     {
-        id: 1,
+        id: 101,
         image: sallar1,
         title: 'High-quality surgical masks with 3-layer protection for enhanced safety.',
         brand: 'MedPro',
@@ -28,7 +28,7 @@ const sallerProducts = [
       
     },
     {
-        id: 2,
+        id: 202,
         image: sallar00,
         title: 'Easy-to-use digital blood pressure monitor for accurate readings.',
         brand: 'HealthMate',

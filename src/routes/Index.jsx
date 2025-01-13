@@ -35,7 +35,7 @@ const AppContent = () => {
                 <Route path="sign-in" element={<SignInForm />} />
                 <Route path="sign-up" element={<SignUpForm />} />
                 <Route path="forget-password" element={<ForgetPassword />} />
-                <Route path="item-details" element={<SingleItemsDetails/>} />
+                <Route path="/details/:id" element={<SingleItemsDetails/>} />
             </Routes>
 
             {shouldShowHeaderAndFooter && <FooterSec />}

@@ -21,8 +21,8 @@ const DrawerComp = () => {
         <>
             {!screens.md ? (
                 <div>
-                    <Button  onClick={showDrawer}>
-                        <FaBars/>
+                    <Button  onClick={showDrawer} className=' border-none'>
+                        <FaBars />
                     </Button>
                     <Drawer onClose={onClose} open={open}>
                         <div className="flex">

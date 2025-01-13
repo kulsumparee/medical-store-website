@@ -29,7 +29,9 @@ const FirstScreen = () => {
 
       {filterData ? (
         <div className='px-5 lg:px-10' >
-          <h1 className=' text-md sm:text-lg  pt-10'>Home  /  Electronics  /  Computers  /  Desktop Computers</h1>
+          <h1 className=' text-md sm:text-lg  pt-10'>
+            Home / Healthcare / Medical Supplies / Health Products  
+          </h1>
           <CommonData setFilterData={setFilterData} setListData={setListData} />
 
           {listData ? (
@@ -38,7 +40,7 @@ const FirstScreen = () => {
                 {
                   currentItems.map(data =>
                     <div key={data.id} className="p-2 border">
-                      <div className='w-full h-56'>
+                      <div className='w-full h-52'>
                         <img src={data.image} alt="card" className=' w-full h-full' />
                      </div>
                       <h1 className=' font-semibold text-zinc-400'>{data.brand}</h1>

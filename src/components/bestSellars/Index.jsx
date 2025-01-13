@@ -1,10 +1,10 @@
 import { Carousel, Rate } from 'antd';
-import { useRef, useState } from 'react';
+import { useRef, } from 'react';
 import { LeftOutlined, RightOutlined, HeartOutlined, ShareAltOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import sallerProducts from '../../assets/MapData/bestSellarsData/data';
 
-const SallarComponent = ({ navBar, data }) => {
-    const [jsonData, setJsonData] = useState(data);
+const SallarComponent = ({ navBar}) => {
     const carouselRef = useRef(null);
 
     const handlePrev = () => {
@@ -17,22 +17,10 @@ const SallarComponent = ({ navBar, data }) => {
 
 
 
-    function FilterData(para) {
-        if (para.target.innerText === "Top20") {
-            setJsonData(data);
-        } else if (para.target.innerText === "Surgical Supplies") {
-            setJsonData(data.filter((f) => f.name === "Surgical"));
-        } else if (para.target.innerText === "Furniture") {
-            setJsonData(data.filter((f) => f.name === "furniture"));
-        } else if (para.target.innerText === "Electronic") {
-            setJsonData(data.filter((f) => f.name === "electronic"));
-        } else if (para.target.innerText === "All") {
-            setJsonData(data);
-        }
-    }
+  
 
     return (
-        <div className="md:py-10 w-full h-full relative px-5">
+        <div className="md:py-10 py-20 w-full h-full relative px-5">
             <div className="flex justify-between pb-5 px-4">
                 {/* Navbar Logic */}
                 <div>
@@ -43,9 +31,9 @@ const SallarComponent = ({ navBar, data }) => {
                     ) : navBar === "third" ? (
                         <h1 className="md:text-3xl text-xl font-semibold text-cyan-500">Top-rated products</h1>
                     ) : navBar === "forth" ? (
-                        <h1 className=" md:text-3xl text-xl font-semibold text-cyan-500">Related products</h1>
+                        <h1 className="md:text-3xl text-xl font-semibold text-cyan-500">Related products</h1>
                     ) : navBar === "fifth" ? (
-                        <h1 className=" md:text-3xl text-xl font-semibold text-cyan-500">You may also like…</h1>
+                        <h1 className="md:text-3xl text-xl font-semibold text-cyan-500">You may also like…</h1>
                     ) : (
                         "none"
                     )}
@@ -54,19 +42,19 @@ const SallarComponent = ({ navBar, data }) => {
                 <div>
                     <nav>
                         <ul className="hidden md:flex justify-center gap-5 text-lg font-medium cursor-pointer">
-                            <li className="hover:text-cyan-500" onClick={FilterData}>
+                            <li className="hover:text-cyan-500" >
                                 Top 20
                             </li>
-                            <li className="hover:text-cyan-500" onClick={FilterData}>
+                            <li className="hover:text-cyan-500" >
                                 Surgical Supplies
                             </li>
-                            <li className="hover:text-cyan-500" onClick={FilterData}>
+                            <li className="hover:text-cyan-500" >
                                 Baby Care
                             </li>
-                            <li className="hover:text-cyan-500" onClick={FilterData}>
+                            <li className="hover:text-cyan-500" >
                                 Medicine
                             </li>
-                            <li className="hover:text-cyan-500" onClick={FilterData}>
+                            <li className="hover:text-cyan-500" >
                                 All
                             </li>
                         </ul>
@@ -85,19 +73,19 @@ const SallarComponent = ({ navBar, data }) => {
                     { breakpoint: 1024, settings: { slidesToShow: 4, slidesToScroll: 1 } },
                     { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1 } },
                     { breakpoint: 576, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-                    { breakpoint: 480, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                    { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
                 ]}
             >
-                {jsonData.map((item) => (
-                    <div
+                {sallerProducts.map((data) => (
+                    <Link to={`/details/${data.id}`}
                         className="p-3 hover:shadow-2xl hover:bg-slate-50 transform group"
-                        key={item.id}
+                        key={data.id}
                     >
                         <div className="relative">
                             <div className="w-full h-52">
                                 <img
-                                    src={item.image}
-                                    alt={item.title}
+                                    src={data.image}
+                                    alt={data.title}
                                     className="w-full h-full rounded-sm object-cover"
                                 />
                             </div>
@@ -118,19 +106,19 @@ const SallarComponent = ({ navBar, data }) => {
                                 </div>
                             </Link>
                         </div>
-                        <p className="font-semibold text-gray-400 pt-2">{item.brand}</p>
+                        <p className="font-semibold text-gray-400 pt-2">{data.brand}</p>
                         <h3 className="sm:font-md lg:text-[16px] font-medium lg:leading-6 hover:text-cyan-500">
-                            {item.title}
+                            {data.title}
                         </h3>
                         <div className="pt-2 flex gap-1">
                             <Rate value={5} className=" text-sm" />
-                            <p>{item.reviews}</p>
+                            <p>{data.reviews}</p>
                         </div>
                         <div className="flex gap-3 pt-2">
-                            <p className="text-[16px] font-bold">{item.price1}</p>
-                            <p className="line-through text-[16px] text-gray-400">{item.price2}</p>
+                            <p className="text-[16px] font-bold">{data.price1}</p>
+                            <p className="line-through text-[16px] text-gray-400">{data.price2}</p>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </Carousel>
 

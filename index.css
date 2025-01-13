@@ -9,7 +9,23 @@
     font-family: jost;
 }
 
-.AntCarocel{
-   
-  
+ .swiper-button-next{
+    color: cyan !important;
+    border: 1px solid black !important;
+    padding: 25px 25px !important;
+    border-radius: 50px !important;
+    font-size: 30px !important;
+}
+.swiper-button-next:after{
+    font-size: 30px !important;
+}
+ .swiper-button-prev{
+    color: cyan !important;
+    border: 1px solid black !important;
+    padding: 25px 25px !important;
+    border-radius: 50px !important;
+    font-size: 30px !important;
+}
+.swiper-button-prev:after{
+    font-size: 30px !important;
 }
