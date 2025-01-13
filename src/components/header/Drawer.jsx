@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button, Drawer, Grid } from 'antd';
 import HeaderComponent from './head/Index';
 import { FaBars } from 'react-icons/fa6';
+import image from "../../assets/images/pakdeals.svg"
 
 const { useBreakpoint } = Grid;
 
@@ -21,10 +22,14 @@ const DrawerComp = () => {
         <>
             {!screens.md ? (
                 <div>
-                    <Button  onClick={showDrawer} className=' border-none'>
-                        <FaBars />
-                    </Button>
-                    <Drawer onClose={onClose} open={open}>
+                    <div className='flex justify-between text-center'>
+                        <img src={image} alt="logo" width={80} height={50} />
+                        <Button onClick={showDrawer} className=' border-none'>
+                            <FaBars />
+                        </Button>
+</div>
+                    
+                    <Drawer  onClose={onClose} open={open}>
                         <div className="flex">
                             <HeaderComponent />
                         </div>

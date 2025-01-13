@@ -32,7 +32,6 @@ const ResponsiveSwiper = () => {
                 {OurTeamData.map((item, index) => (
                     <SwiperSlide key={index}>
                         <div className="bg-white shadow-md rounded-lg overflow-hidden relative">
-                            {/* Image Section */}
                             <div className="relative h-72 w-full">
                                 <img
                                     src={item.image}
@@ -41,7 +40,6 @@ const ResponsiveSwiper = () => {
                                 />
 
                             </div>
-                            {/* Text Section */}
                             <div className="md:p-4 py-4 px-2">
                                 <div className="flex justify-between">
                                     <h3 className="text-xl font-semibold text-cyan-500">
