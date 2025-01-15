@@ -20,7 +20,7 @@ const SallarComponent = ({ navBar}) => {
   
 
     return (
-        <div className="md:py-10 py-20 w-full h-full relative px-5">
+        <div className="md:py-10 py-10 w-full h-full relative px-5">
             <div className="flex justify-between pb-5 px-4">
                 {/* Navbar Logic */}
                 <div>

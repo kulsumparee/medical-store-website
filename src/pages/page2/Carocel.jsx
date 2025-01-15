@@ -23,7 +23,7 @@ const AntCarocel = () => {
                     {CarocelData.map((data) => (
                         <div
                             key={data.id}
-                            className="relative h-[40vh] sm:h-[70vh] text-white w-full"
+                            className="relative h-[50vh] sm:h-[70vh] text-white w-full"
                         >
                             <img
                                 src={data.src}

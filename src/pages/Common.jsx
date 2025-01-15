@@ -6,7 +6,7 @@ const CommonData = ({ setFilterData, setListData, className }) => {
   return (
       <div>
           <div className='py-5'>
-              <h1 className='text-2xl font-medium pt-5 text-cyan-500'>Medical Supplies and Healthcare Products</h1>
+              <h1 className='text-2xl font-medium py-5 text-cyan-500'>Medical Supplies and Healthcare Products</h1>
               <p className='text-md sm:text-lg pt-1'>Discover a wide range of medical equipment, healthcare products, wellness essentials, and more to support your health and well-being.</p>
           </div>
 

@@ -8,7 +8,7 @@ const HeadSetComp = () => {
         HeadSetData.map(data => (
           <div key={data.id} className="relative">
             {/* Image Section */}
-            <div className="w-full  h-[35vh] md:h-[80vh] ">
+            <div className="w-full  h-[45vh] md:h-[75vh] ">
               <img
                 src={data.image}
                 alt={data.title2}
@@ -17,7 +17,7 @@ const HeadSetComp = () => {
             </div>
 
             {/* Content Section */}
-            <div className="absolute top-10 sm:top-20 md:top-32 left-5 sm:left-10 md:left-16 lg:left-20">
+            <div className="absolute top-10 sm:top-20 md:top-20 left-5 sm:left-10 md:left-16 lg:left-20">
               <p className="text-cyan-700 font-medium text-sm sm:text-lg md:text-xl">
                 {data.para}
               </p>

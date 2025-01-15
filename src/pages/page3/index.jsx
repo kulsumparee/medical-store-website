@@ -134,11 +134,11 @@ const SingleCard = ({ onBackClick, data }) => {
 
             <div>
 
-                <div>
+                <div className='m-0'>
                     <SallarComponent data={sallerProducts} navBar={"forth"} />
                 </div>
 
-                <div>
+                <div className='m-0'>
                     <SallarComponent data={HomeData} navBar={"fifth"} />
                 </div>
 
