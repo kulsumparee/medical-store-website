@@ -11,23 +11,58 @@ import img6 from "../../assets/images/profile/shop 1.svg";
 import img7 from "../../assets/images/profile/return-box 1.svg";
 import AccordionUsage from '../../pages/page3/accordian/Index';
 import { DownOutlined } from '@ant-design/icons';
+import { useState } from 'react';
 
 const SingleItemsDetails = () => {
+    const [isPreviewOpen, setIsPreviewOpen] = useState(false);
     const { id } = useParams();
     const navigate = useNavigate();
     const item = SavingsData.find(item => item.id === parseInt(id));
+    const [mainImage, setMainImage] = useState(item?.image);
+    const [selectedProduct, setSelectedProduct] = useState('image');
+    const handleThumbnailClick = (productKey, imageUrl) => {
+        setMainImage(imageUrl);
+        setSelectedProduct(productKey);
+    };
 
     if (!item) {
         return <div>Item not found</div>;
     }
 
+    const openPreview = () => setIsPreviewOpen(true);
+    const closePreview = () => setIsPreviewOpen(false);
+
+    const handleAddToCart = () => {
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingItem = cartItems.find((cartItem) => cartItem.id === item?.id);
+
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cartItems.push({
+                id: item?.id,
+                mainImage,
+                brand: item?.brand,
+                title: item?.title,
+                price: item?.price,
+                quantity: 1
+            });
+        }
+
+        // Save the updated cart to localStorage
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+
+        // Navigate to the cart page
+        navigate('/AddCart');
+    };
+
     return (
         <div>
-            <div className=' flex flex-col-reverse  md:flex-row justify-between px-10'>
+            <div className=' flex flex-col-reverse md:flex-row justify-between px-10'>
                 <h1 className=' py-10 text-md sm:text-lg pt-10 '>
                     Home / Healthcare / Medical Supplies / Health Products </h1>
                 <button
-                    className='flex items-center text-cyan-500 hover:text-cyan-700 mb-5'
+                    className='flex items-center mb-5'
                     onClick={() => navigate(-1)}
                 >
                     <span className='mr-2'>&larr;</span> Back
@@ -37,28 +72,53 @@ const SingleItemsDetails = () => {
 
             <div className=' grid grid-cols-12 px-5 md:px-10 md:gap-10'>
 
-                <div className=" hidden col-span-12 md:col-span-2 md:flex md:flex-col  mb-4 gap-x-3 gap-y-3 ">
-
-                    <Image src={item?.image} className="border-2 border-grey-200" width={100} />
-                    <Image src={item?.image} className="border-2 border-grey-100" width={100} />
-                    <Image src={item?.image} className="border-2 border-grey-100" width={100} />
-
+                <div className=" hidden col-span-12 md:col-span-2 md:flex md:flex-col mb-4 gap-x-3 gap-y-3">
+                    <div className=' w-24 h-24'><img src={item?.product1} onClick={() => handleThumbnailClick('product1', item?.product1)} className={`border-2 cursor-pointer w-full h-full ${selectedProduct === 'product1' ? 'border-blue-500' : 'border-gray-200'}`} /></div>
+                    <div className=' w-24 h-24'><img src={item?.product2} onClick={() => handleThumbnailClick('product2', item?.product2)} className={`border-2 cursor-pointer w-full h-full ${selectedProduct === 'product2' ? 'border-blue-500' : 'border-gray-200'}`} /></div>
+                    <div className=' w-24 h-24'><img src={item?.product3} onClick={() => handleThumbnailClick('product3', item?.product3)} className={`border-2 cursor-pointer w-full h-full ${selectedProduct === 'product3' ? 'border-blue-500' : 'border-gray-200'}`} /></div>
                 </div>
-                <div className="col-span-12 md:col-span-6 lg:col-span-5 ">
-                    <Image
-                        src={item?.image}
-                        maxWidth={400}
-                        maxHeight={400}
-                        className="border-2 border-cyan-100 "
+
+                {/* Image Section */}
+                <div className="col-span-12 md:col-span-6 lg:col-span-5 max-w-full h-96">
+                    <img
+                        src={mainImage}
+                        className="border-2 border-gray-100 object-center object-fill w-full h-full cursor-pointer"
+                        alt="Main Product"
+                        onClick={openPreview}
                     />
                 </div>
 
-                <div className=" md:hidden col-span-12 md:col-span-2 flex md:flex-col  mb-4 gap-x-3 gap-y-3 ">
+                {/* Preview Modal */}
+                {isPreviewOpen && (
+                    <div
+                        className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+                        onClick={closePreview}
+                    >
+                        <div className="relative">
+                            <div className=' w-full h-56'>
+                                <img
+                                    src={mainImage}
+                                    className="w-full h-full object-cover"
+                                    alt="Preview"
+                                />
+                            </div>
+                            <button
+                                className="absolute top-2 right-2 text-white bg-red-500 hover:bg-red-600 rounded-full  w-8 h-8"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    closePreview();
+                                }}
+                            >
+                                ✕
+                            </button>
+                        </div>
+                    </div>
+                )}
 
-                    <Image src={item?.image} className="border-2 border-grey-200" width={100} />
-                    <Image src={item?.image} className="border-2 border-grey-100" width={100} />
-                    <Image src={item?.image} className="border-2 border-grey-100" width={100} />
-
+                <div className=" md:hidden col-span-12 md:col-span-2 flex md:flex-col mb-4 gap-x-3 gap-y-3 pt-5 ">
+                    <div className=' w-24 h-24'><img src={item?.product1} onClick={() => handleThumbnailClick('product1', item?.product1)} className={`border-2 cursor-pointer w-full h-full ${selectedProduct === 'product1' ? 'border-blue-500' : 'border-gray-200'}`} /></div>
+                    <div className=' w-24 h-24'><img src={item?.product2} onClick={() => handleThumbnailClick('product2', item?.product2)} className={`border-2 cursor-pointer w-full h-full ${selectedProduct === 'product2' ? 'border-blue-500' : 'border-gray-200'}`} /></div>
+                    <div className=' w-24 h-24'><img src={item?.product3} onClick={() => handleThumbnailClick('product3', item?.product3)} className={`border-2 cursor-pointer w-full h-full ${selectedProduct === 'product3' ? 'border-blue-500' : 'border-gray-200'}`} /></div>
                 </div>
 
                 <div className=" col-span-12 md:col-span-12 md:mx-20 lg:mx-0 mt-10 lg:mt-0 lg:col-span-5">
@@ -66,7 +126,7 @@ const SingleItemsDetails = () => {
                         <div className="flex items-center">
                             <h1 className="text-gray-500">{item?.title}</h1>
                             <Divider type="vertical" />
-                            <span><Rate className=' flex gap-0 text-sm' /></span> <p className=" pl-2 text-sm">{item?.reviews} </p>
+                            <span><Rate value={5} className='flex gap-0 text-sm' /></span> <p className=" pl-2 text-sm">3219 reviews</p>
                         </div>
                         <h1 className="text-xl md:font-semibold my-4">{item?.para} </h1>
                         <Divider />
@@ -77,14 +137,15 @@ const SingleItemsDetails = () => {
 
                         <div className="mt-5 flex gap-3">
                             <Counter />
-                            <Link to="/cart" className='w-full'>
-                                <button className="flex justify-center items-center gap-5 py-2 rounded-full text-lg bg-cyan-500 font-semibold w-full">
+                            {/* <Link to="/cart" className='w-full'> */}
+                                <button onClick={handleAddToCart} className="flex justify-center items-center gap-5 py-2 rounded-full text-lg bg-[#f5c34b] hover:bg-[#f5c34b] font-semibold w-full">
                                     Add to cart
-                                </button></Link>
+                                </button>
+                                {/* </Link> */}
                         </div>
                         <div>
                             <Link to="/sign-in" >
-                                <button className="flex justify-center flex-wrap items-center font-semibold py-3 border-2 rounded-full w-[100%] mt-5 border-cyan-500">Buy Now</button>
+                                <button className="flex justify-center flex-wrap items-center font-semibold py-3 border-2 rounded-full w-[100%] mt-5 border-[#f5c34b]">Buy Now</button>
                             </Link>
 
                             <div className=" flex flex-wrap mt-5 gap-1 items-center">
@@ -103,13 +164,13 @@ const SingleItemsDetails = () => {
                                 <img src={img5} width={40} alt="truck img" />
                                 <h1>Free shipping, arrives by Thu, Jun 2 to Sacramento, 95829</h1>
                             </div>
-                            <h1 className="my-4 text-lg ml-7"><span className="font-bold text-cyan-500">Want it faster?</span> <span className="underline">Add an address</span> to see options
+                            <h1 className="my-4 text-lg ml-7"><span className="font-bold text-[#f5c34b]">Want it faster?</span> <span className="underline">Add an address</span> to see options
                                 <span className="underline"> More options</span></h1>
 
                             <div className="flex gap-2">
                                 <img src={img6} width={40} alt="ship img" />
                                 <h1>Sold and shipped by<br />
-                                    <span className="font-bold text-cyan-500">TFN-STORE | TUFAN STORE LLC Fulfilled by Zenmart</span>
+                                    <span className="font-bold text-[#f5c34b]">TFN-STORE | TUFAN STORE LLC Fulfilled by Zenmart</span>
                                 </h1>
                             </div>
                             <div className="flex my-5 ml-7 gap-3">
@@ -124,7 +185,7 @@ const SingleItemsDetails = () => {
                         </div>
 
                         <div>
-                            <h1 className=" font-semibold text-xl text-cyan-500">More saller option(2)</h1>
+                            <h1 className=" font-semibold text-xl text-[#f5c34b]">More saller option(2)</h1>
                             <h1 className=" text-lg my-2">Starting from $1,249.00</h1>
                             <h1 className=" underline text-lg">Compare all sellers</h1>
                         </div>

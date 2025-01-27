@@ -31,7 +31,7 @@ const DrawerComp = () => {
                     
                     <Drawer  onClose={onClose} open={open}>
                         <div className="flex">
-                            <HeaderComponent />
+                            <HeaderComponent  />
                         </div>
                     </Drawer>
                 </div>

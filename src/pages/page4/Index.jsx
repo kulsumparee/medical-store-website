@@ -4,8 +4,11 @@ import CardData from './Data';
 import Counter from '../page3/counter';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../CartContext';
+import { useContext } from 'react';
 
 const AddToCartPage = () => {
+    const { cart } = useContext(CartContext);
 
         return (
             <div className='px-5'>
@@ -24,9 +27,6 @@ const AddToCartPage = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-12 gap-5 ">
-
-
-
                     <div className='   col-span-12 lg:col-span-9  '>
                         <div className=" overflow-auto">
                             <table className="border min-w-max w-full ">
@@ -44,21 +44,22 @@ const AddToCartPage = () => {
                                     <tr>
                                         <td></td>
                                     </tr>
-                                    {CardData.map((data, index) => (
+                                    {cart.map((data, index) => (
                                         <tr key={index} className="border-b hover:bg-gray-50">
                                             <td className="px-4 py-2">
                                                 <div className="flex items-center gap-3">
                                                     <img src={data.image} alt={data.title} className="w-20 h-20 md:w-32 md:h-32 object-cover" />
                                                     <div>
+                                                        <p className="font-semibold text-gray-400 pt-2">{data.brand}</p>
                                                         <h1 className="font-medium w-40 md:w-52">{data.title}</h1>
                                                         <p className="text-sm md:text-md text-gray-500">{data.capacity}</p>
                                                         <p className="text-sm md:text-md text-gray-500">{data.color}</p>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td className="px-4 py-2 font-medium">{data.price}</td>
+                                            <td className="px-4 py-2 font-medium">{data.price1}</td>
                                             <td className="px-4 py-2"><Counter className="" /></td>
-                                            <td className="px-4 py-2 font-medium">{data.price}</td>
+                                            <td className="px-4 py-2 font-medium">{data.price1}</td>
                                             <td className="px-4 py-2 text-center">
                                                 <button className="text-red-500 hover:text-red-700"><ClearIcon /></button>
                                             </td>
@@ -71,13 +72,13 @@ const AddToCartPage = () => {
 
                         <div className=" sm:flex justify-between py-10">
 
-                            <div className=' border-2 border-dashed md:text-lg flex p-3  justify-between gap-1 rounded-md mb-5 w-full max-w-[300px]'>
+                            <div className=' border-2 border-dashed md:text-lg flex p-3 justify-between gap-1 rounded-md mb-5 w-full max-w-[300px]'>
                                 <p>Coupon code</p>
                                 <p>Apply Coupon</p>
                             </div>
 
-                            <div className=" md:flex gap-5 items-center text-center grid gap-4">
-                                <Button title="Continue Shopping" className="bg-transparent border-2 py-1 border-cyan-500 " />
+                            <div className=" md:flex items-center text-center grid gap-4">
+                                <Button title="Continue Shopping" className="bg-transparent border-2 py-1 border-[#f5c34b] " />
                                 <Button title="Update Cart" className=""/>
 
                             </div>

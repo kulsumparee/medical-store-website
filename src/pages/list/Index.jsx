@@ -62,7 +62,7 @@ const CardList = () => {
               </div>
              
               <Link to="/cart">
-                <button className=' my-2 font-semibold  px-10  md:px-20 md:text-sm lg:text-sm  lg:px-16 py-3 bg-cyan-500 rounded-sm'>{data.button}</button>
+                <button className=' my-2 font-semibold  px-10  md:px-20 md:text-sm lg:text-sm  lg:px-16 py-3 bg-[#f5c34b] rounded-sm'>{data.button}</button>
               </Link>
               <div className=' flex hover:cursor-pointer'>
                 <h1 className=' '>{data.text}</h1>

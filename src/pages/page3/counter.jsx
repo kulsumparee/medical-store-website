@@ -6,7 +6,7 @@ function Counter({ className }) {
     return (
         <div className={`flex justify-center items-center gap-5 px-3 rounded-full border-2  ${className}`}>
             <button
-                onClick={() => setCount(count - 1)}
+                onClick={() => count > 0 && setCount(count - 1)}
                 className="text-3xl   cursor-pointer"
             >
                 -

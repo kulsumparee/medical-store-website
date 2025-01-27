@@ -7,10 +7,16 @@ import Line from "../../../assets/images/line.svg"
 import { Link } from "react-router-dom"
 import imds from "../../../assets/images/account.svg"
 import cart from "../../../assets/images/cart.svg"
+import { CartContext } from "../../../pages/CartContext"
+import { useContext } from "react"
 
 
 
 const HeaderComponent = () => {
+    const { cart } = useContext(CartContext);
+
+    // Calculate total items in the cart
+    const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
 
     return (
@@ -61,26 +67,23 @@ const HeaderComponent = () => {
                         <h1>Wishlist</h1>
                     </div>
 
-
-
                     <Link to="/sign-in" className="flex items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
                         <img src={imds} alt="account" />
                         <h1>SignIn</h1>
                     </Link>
 
-
-                    <div className="flex items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
-                        <img src={cart} alt="account" />
-                        <h1>Cart</h1>
-                    </div>
-
-
-
+                    <Link to="/AddCart" className="flex relative items-center gap-1 cursor-pointer lg:text-md lg:font-semibold">
+                        {/* <img src={imds} alt="account" /> */}
+                        Cart
+                        {cartCount > 0 && (
+                            <span className="absolute top-0 right-0 left-6 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                                {cartCount}
+                            </span>
+                        )}
+                    </Link>
 
                 </div>
-
             </div>
-
             <div className=" pt-10">
                 <img src={Line} alt="line" height={140} />
             </div>

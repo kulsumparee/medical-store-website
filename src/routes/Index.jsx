@@ -12,6 +12,8 @@ import SignUpForm from '../components/form/SignUp';
 import ForgetPassword from '../components/form/ForgetPassword';
 import HeadSetPage from '../pages/headSet/Index';
 import SingleItemsDetails from '../components/singleData';
+import ItemDetails from "../components/singleData/shopCategories"
+import CartPage from '../components/carddata';
 
 const AppContent = () => {
     const location = useLocation();
@@ -35,7 +37,9 @@ const AppContent = () => {
                 <Route path="sign-in" element={<SignInForm />} />
                 <Route path="sign-up" element={<SignUpForm />} />
                 <Route path="forget-password" element={<ForgetPassword />} />
-                <Route path="/details/:id" element={<SingleItemsDetails/>} />
+                <Route path="/details/:id" element={<SingleItemsDetails />} />
+                <Route path="/details" element={<ItemDetails />} />
+                 <Route path="AddCart" element={<CartPage />} /> 
             </Routes>
 
             {shouldShowHeaderAndFooter && <FooterSec />}

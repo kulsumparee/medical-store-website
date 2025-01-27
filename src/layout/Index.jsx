@@ -17,11 +17,8 @@ const Layout = () => {
       <HealthCare />
       <SallarComponent  data={sallerProducts} navBar={"first"} />
       <HeadSetComp />
-      {/* <SallarComponent data={HomeData} navBar={"second"} /> */}
       <ShopCategoriesComp />
       <ResponsiveSwiper/>
-      {/* <MeetOurTeam/> */}
-      {/* <HeadSet2Comp /> */}
       <SallarComponent data={sallerProducts} navBar={"third"} />
       <OurReviews/>
     </Mainlayout>

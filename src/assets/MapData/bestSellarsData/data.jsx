@@ -4,13 +4,25 @@ import sallar2 from "../../images/sallar/BP.webp"
 import sallar3 from "../../images/sallar/baby.webp"
 import sallar4 from "../../images/sallar/hand-sanitizer.webp"
 import sallar5 from "../../images/sallar/wheelchair12.jpg"
-import sallar6 from "../../images/sallar/img6.jpg"
-import sallar7 from "../../images/sallar/img6.jpg"
-import sallar8 from "../../images/sallar/img6.jpg"
-import sallar9 from "../../images/sallar/img6.jpg"
-import sallar0 from "../../images/sallar/img6.jpg"
 import sallar00 from "../../images/sallar/medicine2.jpg"
-
+import mask1 from "../../images/ShopCategories/mask1.jpg"
+import mask2 from "../../images/ShopCategories/child.jpg"
+import mask3 from "../../images/ShopCategories/mask3.jpg"
+import med1 from "../../images/major/med1.jpg"
+import med2 from "../../images/major/med2.jpg"
+import med3 from "../../images/major/med3.jpg"
+import baby1 from "../../images/major/baby1.jpg"
+import baby2 from "../../images/major/baby2.jpg"
+import baby3 from "../../images/major/baby3.jpg"
+import seni1 from "../../images/major/sanitizer.jpg"
+import seni2 from "../../images/major/seni2.jpg"
+import seni3 from "../../images/major/seni3.jpg"
+import bp1 from "../../images/ShopCategories/bp1.jpg"
+import bp2 from "../../images/ShopCategories/bp2.jpg"
+import bp3 from "../../images/ShopCategories/bp3.jpg"
+import wheel1 from "../../images/major/wheel1.jpg"
+import wheel2 from "../../images/major/wheel2.jpg"
+import wheel3 from "../../images/major/wheel3.jpg"
 
 
 
@@ -23,19 +35,26 @@ const sallerProducts = [
         price1: '10$',
         price2: '8$',
         reviews:'3,014 reviews',
-        name:'Surgical'
+        name: 'Surgical',
+        product1: mask1,
+        product2: mask2,
+        product3: mask3,
+
 
       
     },
     {
         id: 202,
         image: sallar00,
-        title: 'Easy-to-use digital blood pressure monitor for accurate readings.',
+        title: 'Prescription and over-the-counter medications.',
         brand: 'HealthMate',
         price1: '40$',
         price2: '32$',
         reviews: '3,014 reviews',
-        name: 'Surgical'
+        name: 'Surgical',
+        product1: med1,
+        product2: med2,
+        product3: med3,
     },
     {
         id: 3,
@@ -45,7 +64,10 @@ const sallerProducts = [
         price1: '100$',
         price2: '85$',
         reviews: '3,014 reviews',
-        name: 'Surgical'
+        name: 'Surgical',
+        product1: baby1,
+        product2: baby2,
+        product3: baby3,
     },
     {
         id: 4,
@@ -55,7 +77,23 @@ const sallerProducts = [
         price1: '30$',
         price2: '25$',
         reviews: '2,254 reviews',
-        name: 'Surgical'
+        name: 'Surgical',
+        product1: seni1,
+        product2: seni2,
+        product3: seni3,
+    },
+    {
+        id: 6,
+        image: sallar2,
+        title: 'Easy-to-use digital blood pressure monitor for accurate readings.',
+        brand: 'HealthMate',
+        price1: '40$',
+        price2: '32$',
+        reviews: '3,014 reviews',
+        name: 'Surgical',
+        product1: bp1,
+        product2: bp2,
+        product3: bp3,
     },
     {
         id: 5,
@@ -65,155 +103,16 @@ const sallerProducts = [
         price1: '240$',
         price2: '220$',
         reviews: '3,014 reviews',
-        name: 'Surgical'
+        name: 'Surgical',
+        product1: wheel1,
+        product2: wheel2,
+        product3: wheel3,
+
     },
 
-    {
-        id: 6,
-        image: sallar2,
-        title: 'Easy-to-use digital blood pressure monitor for accurate readings.',
-        brand: 'HealthMate',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'
-    },
-    {
-        id: 7,
-        image: sallar7,
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'
-    },
-    {
-        id: 8,
-        image: sallar8,
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'
-    },
-    {
-        id: 9,
-        image: sallar9,
-        name: "baby",
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        
-       
-    },
-    {
-        id: 0,
-        image: sallar0,
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'
-    },
 
-    {
-        id: 1,
-        image: sallar1,
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'
-    },
-    {
-        id: 2,
-        image: sallar2,
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'    },
-    {
-        id: 3,
-        image: sallar3,
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'  
-    },
-    {
-        id: 4,
-        image: sallar4, 
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'    },
-    {
-        id: 5,
-        image: sallar5, 
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'    },
+   
 
-    {
-        id: 6,
-        image: sallar6,
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'    },
-    {
-        id: 7,
-        image: sallar7,
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'    },
-    {
-        id: 8,
-        image: sallar8,
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'    },
-    {
-        id: 9,
-        image: sallar9,
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'    },
-    {
-        id: 0,
-        image: sallar0,
-        title: 'Experienced Cardiologist, 15 years in practice',
-        brand: 'Dr. Sarah Johnson',
-        price1: '40$',
-        price2: '32$',
-        reviews: '3,014 reviews',
-        name: 'Surgical'    },
 ];
 
 export default sallerProducts

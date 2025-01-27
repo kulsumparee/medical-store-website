@@ -1,16 +1,16 @@
-import React from 'react'
-import { BrowserRouter as Router, } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import AppContent from './routes/Index';
+import { CartProvider } from './pages/CartContext';
 
 const App = () => {
-
   return (
-    <Router>
+    <CartProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </CartProvider>
+  );
+};
 
-<AppContent/>
-    </Router>
-
-  )
-}
-
-export default App
+export default App;

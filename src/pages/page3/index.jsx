@@ -66,13 +66,13 @@ const SingleCard = ({ onBackClick, data }) => {
                         <div className="mt-5 flex gap-3">
                             <Counter />
                             <Link to="/cart" className='w-full'>
-                                <button className="flex justify-center items-center gap-5 py-2 rounded-full text-lg bg-cyan-500 font-semibold w-full">
+                                <button className="flex justify-center items-center gap-5 py-2 rounded-full text-lg bg-[#f5c34b] font-semibold w-full">
                                     Add to cart
                                 </button></Link>
                         </div>
                         <div>
                             <Link to="/sign-in" >
-                                <button className="flex justify-center flex-wrap items-center font-semibold py-3 border-2 rounded-full w-[100%] mt-5 border-cyan-500">Buy Now</button>
+                                <button className="flex justify-center flex-wrap items-center font-semibold py-3 border-2 rounded-full w-[100%] mt-5 border-[#f5c34b]">Buy Now</button>
                             </Link>
 
                             <div className=" flex flex-wrap mt-5 gap-1 items-center">

@@ -266,7 +266,7 @@ function AccordionUsage() {
                                 </div>
 
                                 <div className=' flex justify-center '>
-                                    <button className='  font-semibold border-2 border-[#ffa600c9] hover:bg-[#ffa600c9] py-2 px-5 rounded-md mt-3'>
+                                    <button className='  font-semibold border-2 border-[#f5c34b] hover:bg-[#f5c34b] py-2 px-5 rounded-md mt-3'>
                                         See All review</button>
                                 </div>
                             </div>

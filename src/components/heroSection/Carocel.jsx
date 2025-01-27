@@ -56,17 +56,17 @@ const AntCarocel = () => {
                 
                 <button
                     onClick={LeftSlide}
-                    className='absolute left-1 md:left-5 top-1/2 transform -translate-y-1/2 border-2 border-cyan-500 w-10 h-10 rounded-full bg-white flex items-center justify-center'
+                    className='absolute left-1 md:left-5 top-1/2 transform -translate-y-1/2 border-2 border-[#f5c34b] w-10 h-10 rounded-full bg-white flex items-center justify-center'
                 >
-                    <LeftOutlined className=' text-cyan-500' />
+                    <LeftOutlined className=' text-[#f5c34b]' />
                 </button>
 
                 
                 <button
                     onClick={RightSlide}
-                    className='absolute right-1 md:right-5 top-1/2 transform -translate-y-1/2 border-2 border-cyan-500 w-10 h-10 rounded-full bg-white flex items-center justify-center'
+                    className='absolute right-1 md:right-5 top-1/2 transform -translate-y-1/2 border-2 border-[#f5c34b] w-10 h-10 rounded-full bg-white flex items-center justify-center'
                 >
-                    <RightOutlined className=' text-cyan-500'/>
+                    <RightOutlined className=' text-[#f5c34b]'/>
                 </button>
             </div>
         </>
