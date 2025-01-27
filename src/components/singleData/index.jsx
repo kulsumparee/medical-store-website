@@ -124,11 +124,11 @@ const SingleItemsDetails = () => {
                 <div className=" col-span-12 md:col-span-12 md:mx-20 lg:mx-0 mt-10 lg:mt-0 lg:col-span-5">
                     <div className="border-2 p-3 md:p-8  sm:mb-4 lg:mb-0  rounded-md ">
                         <div className="flex items-center">
-                            <h1 className="text-gray-500">{item?.title}</h1>
+                            <h1 className="text-gray-500">{item?.brand}</h1>
                             <Divider type="vertical" />
                             <span><Rate value={5} className='flex gap-0 text-sm' /></span> <p className=" pl-2 text-sm">3219 reviews</p>
                         </div>
-                        <h1 className="text-xl md:font-semibold my-4">{item?.para} </h1>
+                        <h1 className="text-xl md:font-semibold my-4">{item?.title} </h1>
                         <Divider />
                         <div className="flex gap-3">
                             <h1 className="text-2xl font-semibold">{item?.price} </h1>

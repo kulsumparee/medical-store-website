@@ -29,8 +29,8 @@ const SavingsCompo = () => {
                                     <div className="w-full h-56 overflow-hidden rounded-md">
                                         <img src={data.image} alt={data.title} className='w-full h-full object-cover' />
                                     </div>
-                                    <h1 className='font-semibold text-lg pt-2'>{data.title}</h1>
-                                    <p className='pb-5'>{data.para}</p>
+                                    <h1 className='font-semibold text-lg pt-2'>{data.brand}</h1>
+                                    <p className='pb-5'>{data.title}</p>
                                 </div>
                             </Link>
                         </motion.div>

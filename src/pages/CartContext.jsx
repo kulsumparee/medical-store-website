@@ -1,13 +1,10 @@
 import React, { createContext, useState } from 'react';
 
-// Create a Cart Context
 export const CartContext = createContext();
 
-// Cart Provider Component
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
-    // Function to add items to the cart
     const addToCart = (item) => {
         setCart((prevCart) => {
             const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);

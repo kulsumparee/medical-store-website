@@ -102,8 +102,8 @@ const SallarComponent = ({ navBar }) => {
                                 <p className="text-black">{data.reviews}</p>
                             </div>
                             <div className="flex gap-3 pt-2">
-                                <p className="text-[16px] font-bold text-black">{data.price1}</p>
-                                <p className="line-through text-[16px] text-gray-400">{data.price2}</p>
+                                <p className="text-[16px] font-bold text-black">{data.price}</p>
+                                <p className="line-through text-[16px] text-gray-400">{data.originalprice}</p>
                             </div>
                         </div>
                     </Link>
@@ -127,6 +127,6 @@ const SallarComponent = ({ navBar }) => {
             </div>
         </div>
     );
-};
+}
 
 export default SallarComponent;

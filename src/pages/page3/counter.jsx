@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Counter({ className }) {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
 
     return (
         <div className={`flex justify-center items-center gap-5 px-3 rounded-full border-2  ${className}`}>

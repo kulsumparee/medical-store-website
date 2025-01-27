@@ -9,7 +9,6 @@ const CartPage = () => {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        
         const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
         setCart(cartItems);
     }, []);
@@ -17,6 +16,7 @@ const CartPage = () => {
     const removeCard = (id) => {
         const updatedCart = cart.filter((item) => item.id !== id);
         setCart(updatedCart);
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
     };
 
     return (
@@ -68,7 +68,7 @@ const CartPage = () => {
                                         </td>
                                         <td className="px-4 py-2 font-medium">{data.price}</td>
 
-                                        <td className="px-4 py-2"><Counter/></td>
+                                        <td className="px-4 py-2"><Counter /></td>
                                         <td className="px-4 py-2 font-medium">{data.price}</td>
                                         <td className="px-4 py-2 text-center">
                                             <button onClick={() => removeCard(data.id)} className="text-red-500 hover:text-red-700"><ClearIcon /></button>
