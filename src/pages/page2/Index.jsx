@@ -38,7 +38,7 @@ const SecondPage = () => {
                 <img src={Line} alt="Line" />
             </div>
             <h1 className='px-10 py-10 text-md sm:text-lg pt-10'>
-             Home / Healthcare / Medical Supplies / Health Products            </h1>
+                <span className=' text-slate-500'> /  Electronics  /  Computers  /  Desktop Computers</span> </h1>
             <div>
                 <AntCarocel />  
                 <div className=' px-5 md:px-10'>

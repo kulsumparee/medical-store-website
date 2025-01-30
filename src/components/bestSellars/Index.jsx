@@ -110,7 +110,7 @@ const SallarComponent = ({ navBar }) => {
                 ))}
             </Carousel>
 
-            {/* Navigation Arrows */}
+            
             <div className="flex absolute top-1/2 left-0 right-0 justify-between px-4 transform -translate-y-1/2">
                 <button
                     onClick={handlePrev}

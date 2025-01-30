@@ -1,4 +1,4 @@
-import image1 from "../../images/sallar/wheelchair12.jpg"
+import image1 from "../../images/logo1.png"
 import image2 from "../../images/carocel/medicine home.avif"
 import image3 from "../../images/carocel/baby home.jpg"
 import image4 from "../../images/home/wheelchair1.jpeg"

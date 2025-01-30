@@ -88,7 +88,7 @@ const CartPage = () => {
                         </div>
 
                         <div className=" md:flex items-center text-center grid gap-4">
-                            <Button title="Continue Shopping" className="bg-transparent border-2 py-1 border-[#f5c34b] " />
+                            <Link to="/"> <Button title="Continue Shopping" className="bg-transparent border-2 py-1 border-[#f5c34b] " /></Link>
                             <Button title="Update Cart" className="" />
 
                         </div>

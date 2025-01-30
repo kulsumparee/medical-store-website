@@ -5,6 +5,7 @@ import CardList from '../list/Index'
 import PaginationComp from '../list/Pagination'
 import SecondPage from '../page2/Index'
 import CommonData from '../Common'
+import { Link } from 'react-router-dom'
 
 
 const FirstScreen = () => {
@@ -30,7 +31,7 @@ const FirstScreen = () => {
       {filterData ? (
         <div className='px-5 lg:px-10' >
           <h1 className=' text-md sm:text-lg  pt-10'>
-            Home / Healthcare / Medical Supplies / Health Products  
+            Home <span className=' text-slate-500'> /  Electronics  /  Computers  /  Desktop Computers</span> 
           </h1>
           <CommonData setFilterData={setFilterData} setListData={setListData} />
 
@@ -40,6 +41,7 @@ const FirstScreen = () => {
                 {
                   currentItems.map(data =>
                     <div key={data.id} className="p-2 border">
+                      <Link to="/details" state={{ item: data }}>
                       <div className='w-full h-52'>
                         <img src={data.image} alt="card" className=' w-full h-full' />
                      </div>
@@ -54,7 +56,8 @@ const FirstScreen = () => {
                         <p>{data.price}</p>
                         <p className='text-gray-500 line-through'>{data.originalPrice}</p>
 
-                      </div>
+                        </div>
+                      </Link>
                     </div>
                   )
                 }

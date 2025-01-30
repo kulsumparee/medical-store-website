@@ -19,7 +19,7 @@ const SingleCard = ({ onBackClick, data }) => {
         <div className=''>
             <div className=' flex flex-col-reverse  md:flex-row justify-between px-10'>
                 <h1 className=' py-10 text-md sm:text-lg pt-10 '>
-                 Home / Healthcare / Medical Supplies / Health Products                </h1>
+                    Home <span className=' text-slate-500'> /  Electronics  /  Computers  /  Desktop Computers</span> </h1>
                 <button onClick={onBackClick}> <ArrowLeftOutlined /> Back to List</button>
             </div>
 

@@ -5,20 +5,20 @@ import { Link } from 'react-router-dom'
 const CheckoutCard = () => {
   return (
       <div className=' px-5 md:px-10 pt-10'>
-          <h1 className=' text-lg'>Home  /  Electronics  /  Computers  /  Desktop Computers</h1>
+      <h1 className=' text-lg'>Home <span className=' text-slate-500'> /  Electronics  /  Computers  /  Desktop Computers</span> </h1>
 
           <div className=" flex py-5 justify-center">
-              <h1 className=' font-semibold text-2xl text-cyan-500 py-5 md:py-10'>Checkout</h1>
+              <h1 className=' font-semibold text-2xl text-black py-5 md:py-10'>Checkout</h1>
           </div>
 
       <div className='grid grid-cols-12 md:gap-10'>
         <div className=" col-span-12 lg:col-span-8">
           <h1 className='text-lg py-2'>Returning customer?
             <Link to="/sign-In">
-              <span className=' font-semibold cursor-pointer text-cyan-600'> Click here to login</span>
+              <span className=' font-semibold cursor-pointer text-black'> Click here to login</span>
             </Link>
           </h1>
-          <h1 className=' text-xl font-semibold py-2 text-cyan-500'>Billing details</h1>
+          <h1 className=' text-xl font-semibold py-2 text-black'>Billing details</h1>
 
           <form action="">
             <div className="md:flex gap-10 ">
@@ -73,7 +73,7 @@ const CheckoutCard = () => {
             </div>
 
             <div className=" pt-8">
-              <h1 className=' text-xl font-semibold py-2 text-cyan-500'>Shipping details</h1>
+              <h1 className=' text-xl font-semibold py-2 text-black'>Shipping details</h1>
 
               <div className='flex gap-3 py-5'>
                 <input type="checkbox" name="" id="address" className='' />
@@ -91,7 +91,7 @@ const CheckoutCard = () => {
           <div className='  '>
             <div className="max-w-md mx-auto bg-white  border rounded-lg overflow-hidden">
               <div className="p-4">
-                <h2 className="text-xl font-semibold mb-4 text-cyan-500">Your Order</h2>
+                <h2 className="text-xl font-semibold mb-4 text-black">Your Order</h2>
                 <div className="flex justify-between mb-2">
                   <p className='w-56'>Apple MacBook Pro with Apple M1 Chip x 2</p>
                   <p>$229.99</p>
@@ -121,7 +121,7 @@ const CheckoutCard = () => {
             <div>
               <div className="max-w-md mx-auto bg-white border mt-10 rounded-lg overflow-hidden">
                 <div className="p-4">
-                  <h2 className="text-xl font-semibold mb-4 text-cyan-500">Payment information</h2>
+                  <h2 className="text-xl font-semibold mb-4 text-black">Payment information</h2>
                   <div className="mb-4">
                     <h3 className="font-semibold">Direct bank transfer</h3>
                     <p className="text-gray-600 text-sm">
